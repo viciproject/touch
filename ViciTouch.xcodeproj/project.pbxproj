@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		374ACA8F127CC37E0017CF13 /* VCDataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA83127CC37E0017CF13 /* VCDataObject.h */; };
+		374ACA90127CC37E0017CF13 /* VCDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA84127CC37E0017CF13 /* VCDataObject.m */; };
+		374ACA91127CC37E0017CF13 /* VCDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA85127CC37E0017CF13 /* VCDataStore.h */; };
+		374ACA92127CC37E0017CF13 /* VCDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA86127CC37E0017CF13 /* VCDataStore.m */; };
+		374ACA93127CC37E0017CF13 /* VCSqlCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA87127CC37E0017CF13 /* VCSqlCommand.h */; };
+		374ACA94127CC37E0017CF13 /* VCSqlCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA88127CC37E0017CF13 /* VCSqlCommand.m */; };
+		374ACA95127CC37E0017CF13 /* VCSqlDataTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA89127CC37E0017CF13 /* VCSqlDataTypes.h */; };
+		374ACA96127CC37E0017CF13 /* VCSqlDataTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8A127CC37E0017CF13 /* VCSqlDataTypes.m */; };
+		374ACA97127CC37E0017CF13 /* VCSqlParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA8B127CC37E0017CF13 /* VCSqlParameter.h */; };
+		374ACA98127CC37E0017CF13 /* VCSqlParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8C127CC37E0017CF13 /* VCSqlParameter.m */; };
+		374ACA99127CC37E0017CF13 /* VCSqlParameterList.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA8D127CC37E0017CF13 /* VCSqlParameterList.h */; };
+		374ACA9A127CC37E0017CF13 /* VCSqlParameterList.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8E127CC37E0017CF13 /* VCSqlParameterList.m */; };
+		374ACA9B127CC37E0017CF13 /* VCDataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA83127CC37E0017CF13 /* VCDataObject.h */; };
+		374ACA9C127CC37E0017CF13 /* VCDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA84127CC37E0017CF13 /* VCDataObject.m */; };
+		374ACA9D127CC37E0017CF13 /* VCDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA85127CC37E0017CF13 /* VCDataStore.h */; };
+		374ACA9E127CC37E0017CF13 /* VCDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA86127CC37E0017CF13 /* VCDataStore.m */; };
+		374ACA9F127CC37E0017CF13 /* VCSqlCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA87127CC37E0017CF13 /* VCSqlCommand.h */; };
+		374ACAA0127CC37E0017CF13 /* VCSqlCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA88127CC37E0017CF13 /* VCSqlCommand.m */; };
+		374ACAA1127CC37E0017CF13 /* VCSqlDataTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA89127CC37E0017CF13 /* VCSqlDataTypes.h */; };
+		374ACAA2127CC37E0017CF13 /* VCSqlDataTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8A127CC37E0017CF13 /* VCSqlDataTypes.m */; };
+		374ACAA3127CC37E0017CF13 /* VCSqlParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA8B127CC37E0017CF13 /* VCSqlParameter.h */; };
+		374ACAA4127CC37E0017CF13 /* VCSqlParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8C127CC37E0017CF13 /* VCSqlParameter.m */; };
+		374ACAA5127CC37E0017CF13 /* VCSqlParameterList.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA8D127CC37E0017CF13 /* VCSqlParameterList.h */; };
+		374ACAA6127CC37E0017CF13 /* VCSqlParameterList.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8E127CC37E0017CF13 /* VCSqlParameterList.m */; };
+		3761F407122416A1006098AE /* ViciTouch_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ViciTouch_Prefix.pch */; };
+		3761F408122416A1006098AE /* VCXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 37731DBA12213E8B00A97784 /* VCXmlParser.h */; };
+		3761F409122416A1006098AE /* VCAsyncDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 37731DCC12213F2400A97784 /* VCAsyncDownloader.h */; };
+		3761F40A122416A1006098AE /* VCMainThreadNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A5A146122401F50078A4F3 /* VCMainThreadNotifier.h */; };
+		3761F40B122416A1006098AE /* VCDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A5A176122408A00078A4F3 /* VCDateHelper.h */; };
+		3761F40D122416A1006098AE /* VCXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37731DBB12213E8B00A97784 /* VCXmlParser.m */; };
+		3761F40E122416A1006098AE /* VCAsyncDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37731DCD12213F2400A97784 /* VCAsyncDownloader.m */; };
+		3761F40F122416A1006098AE /* VCMainThreadNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5A147122401F50078A4F3 /* VCMainThreadNotifier.m */; };
+		3761F410122416A1006098AE /* VCDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5A177122408A00078A4F3 /* VCDateHelper.m */; };
+		3761F412122416A1006098AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		37731DBC12213E8B00A97784 /* VCXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 37731DBA12213E8B00A97784 /* VCXmlParser.h */; };
+		37731DBD12213E8B00A97784 /* VCXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37731DBB12213E8B00A97784 /* VCXmlParser.m */; };
+		37731DCE12213F2400A97784 /* VCAsyncDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 37731DCC12213F2400A97784 /* VCAsyncDownloader.h */; };
+		37731DCF12213F2400A97784 /* VCAsyncDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37731DCD12213F2400A97784 /* VCAsyncDownloader.m */; };
+		37A5A148122401F50078A4F3 /* VCMainThreadNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A5A146122401F50078A4F3 /* VCMainThreadNotifier.h */; };
+		37A5A149122401F50078A4F3 /* VCMainThreadNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5A147122401F50078A4F3 /* VCMainThreadNotifier.m */; };
+		37A5A178122408A00078A4F3 /* VCDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A5A176122408A00078A4F3 /* VCDateHelper.h */; };
+		37A5A179122408A00078A4F3 /* VCDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5A177122408A00078A4F3 /* VCDateHelper.m */; };
+		37DD47761265CFEA00CA0D47 /* VCLazyImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47701265CFEA00CA0D47 /* VCLazyImageView.h */; };
+		37DD47771265CFEA00CA0D47 /* VCLazyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47711265CFEA00CA0D47 /* VCLazyImageView.m */; };
+		37DD47781265CFEA00CA0D47 /* VCLazyScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47721265CFEA00CA0D47 /* VCLazyScrollView.h */; };
+		37DD47791265CFEA00CA0D47 /* VCLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47731265CFEA00CA0D47 /* VCLazyScrollView.m */; };
+		37DD477A1265CFEA00CA0D47 /* VCStaticWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47741265CFEA00CA0D47 /* VCStaticWebView.h */; };
+		37DD477B1265CFEA00CA0D47 /* VCStaticWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47751265CFEA00CA0D47 /* VCStaticWebView.m */; };
+		37DD477C1265CFEA00CA0D47 /* VCLazyImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47701265CFEA00CA0D47 /* VCLazyImageView.h */; };
+		37DD477D1265CFEA00CA0D47 /* VCLazyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47711265CFEA00CA0D47 /* VCLazyImageView.m */; };
+		37DD477E1265CFEA00CA0D47 /* VCLazyScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47721265CFEA00CA0D47 /* VCLazyScrollView.h */; };
+		37DD477F1265CFEA00CA0D47 /* VCLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47731265CFEA00CA0D47 /* VCLazyScrollView.m */; };
+		37DD47801265CFEA00CA0D47 /* VCStaticWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47741265CFEA00CA0D47 /* VCStaticWebView.h */; };
+		37DD47811265CFEA00CA0D47 /* VCStaticWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47751265CFEA00CA0D47 /* VCStaticWebView.m */; };
+		37F38BD2126483130044A2E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F38BD1126483130044A2E3 /* UIKit.framework */; };
+		AA747D9F0F9514B9006C5449 /* ViciTouch_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ViciTouch_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		374ACA83127CC37E0017CF13 /* VCDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCDataObject.h; sourceTree = "<group>"; };
+		374ACA84127CC37E0017CF13 /* VCDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCDataObject.m; sourceTree = "<group>"; };
+		374ACA85127CC37E0017CF13 /* VCDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCDataStore.h; sourceTree = "<group>"; };
+		374ACA86127CC37E0017CF13 /* VCDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCDataStore.m; sourceTree = "<group>"; };
+		374ACA87127CC37E0017CF13 /* VCSqlCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSqlCommand.h; sourceTree = "<group>"; };
+		374ACA88127CC37E0017CF13 /* VCSqlCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSqlCommand.m; sourceTree = "<group>"; };
+		374ACA89127CC37E0017CF13 /* VCSqlDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSqlDataTypes.h; sourceTree = "<group>"; };
+		374ACA8A127CC37E0017CF13 /* VCSqlDataTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSqlDataTypes.m; sourceTree = "<group>"; };
+		374ACA8B127CC37E0017CF13 /* VCSqlParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSqlParameter.h; sourceTree = "<group>"; };
+		374ACA8C127CC37E0017CF13 /* VCSqlParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSqlParameter.m; sourceTree = "<group>"; };
+		374ACA8D127CC37E0017CF13 /* VCSqlParameterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSqlParameterList.h; sourceTree = "<group>"; };
+		374ACA8E127CC37E0017CF13 /* VCSqlParameterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSqlParameterList.m; sourceTree = "<group>"; };
+		3761F416122416A1006098AE /* libViciTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViciTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37731DBA12213E8B00A97784 /* VCXmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCXmlParser.h; path = Classes/VCXmlParser.h; sourceTree = "<group>"; };
+		37731DBB12213E8B00A97784 /* VCXmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCXmlParser.m; path = Classes/VCXmlParser.m; sourceTree = "<group>"; };
+		37731DCC12213F2400A97784 /* VCAsyncDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCAsyncDownloader.h; path = Classes/VCAsyncDownloader.h; sourceTree = "<group>"; };
+		37731DCD12213F2400A97784 /* VCAsyncDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCAsyncDownloader.m; path = Classes/VCAsyncDownloader.m; sourceTree = "<group>"; };
+		37A5A146122401F50078A4F3 /* VCMainThreadNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCMainThreadNotifier.h; path = Classes/VCMainThreadNotifier.h; sourceTree = "<group>"; };
+		37A5A147122401F50078A4F3 /* VCMainThreadNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCMainThreadNotifier.m; path = Classes/VCMainThreadNotifier.m; sourceTree = "<group>"; };
+		37A5A176122408A00078A4F3 /* VCDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCDateHelper.h; path = Classes/VCDateHelper.h; sourceTree = "<group>"; };
+		37A5A177122408A00078A4F3 /* VCDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCDateHelper.m; path = Classes/VCDateHelper.m; sourceTree = "<group>"; };
+		37DD47701265CFEA00CA0D47 /* VCLazyImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCLazyImageView.h; path = Classes/VCLazyImageView.h; sourceTree = "<group>"; };
+		37DD47711265CFEA00CA0D47 /* VCLazyImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLazyImageView.m; path = Classes/VCLazyImageView.m; sourceTree = "<group>"; };
+		37DD47721265CFEA00CA0D47 /* VCLazyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCLazyScrollView.h; path = Classes/VCLazyScrollView.h; sourceTree = "<group>"; };
+		37DD47731265CFEA00CA0D47 /* VCLazyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLazyScrollView.m; path = Classes/VCLazyScrollView.m; sourceTree = "<group>"; };
+		37DD47741265CFEA00CA0D47 /* VCStaticWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCStaticWebView.h; path = Classes/VCStaticWebView.h; sourceTree = "<group>"; };
+		37DD47751265CFEA00CA0D47 /* VCStaticWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCStaticWebView.m; path = Classes/VCStaticWebView.m; sourceTree = "<group>"; };
+		37F38BD1126483130044A2E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AA747D9E0F9514B9006C5449 /* ViciTouch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViciTouch_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libViciTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViciTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3761F411122416A1006098AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3761F412122416A1006098AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				37F38BD2126483130044A2E3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libViciTouch.a */,
+				3761F416122416A1006098AE /* libViciTouch.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* ViciTouch */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = ViciTouch;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				37F38BD1126483130044A2E3 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				374ACA82127CC37E0017CF13 /* SQL */,
+				37DD47371265CD2C00CA0D47 /* Threading */,
+				37F38BB6126482C40044A2E3 /* Views */,
+				37731DE012213F6F00A97784 /* Xml */,
+				37A5A176122408A00078A4F3 /* VCDateHelper.h */,
+				37A5A177122408A00078A4F3 /* VCDateHelper.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* ViciTouch_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		374ACA82127CC37E0017CF13 /* SQL */ = {
+			isa = PBXGroup;
+			children = (
+				374ACA83127CC37E0017CF13 /* VCDataObject.h */,
+				374ACA84127CC37E0017CF13 /* VCDataObject.m */,
+				374ACA85127CC37E0017CF13 /* VCDataStore.h */,
+				374ACA86127CC37E0017CF13 /* VCDataStore.m */,
+				374ACA87127CC37E0017CF13 /* VCSqlCommand.h */,
+				374ACA88127CC37E0017CF13 /* VCSqlCommand.m */,
+				374ACA89127CC37E0017CF13 /* VCSqlDataTypes.h */,
+				374ACA8A127CC37E0017CF13 /* VCSqlDataTypes.m */,
+				374ACA8B127CC37E0017CF13 /* VCSqlParameter.h */,
+				374ACA8C127CC37E0017CF13 /* VCSqlParameter.m */,
+				374ACA8D127CC37E0017CF13 /* VCSqlParameterList.h */,
+				374ACA8E127CC37E0017CF13 /* VCSqlParameterList.m */,
+			);
+			name = SQL;
+			path = Classes/SQL;
+			sourceTree = "<group>";
+		};
+		37731DE012213F6F00A97784 /* Xml */ = {
+			isa = PBXGroup;
+			children = (
+				37731DBA12213E8B00A97784 /* VCXmlParser.h */,
+				37731DBB12213E8B00A97784 /* VCXmlParser.m */,
+			);
+			name = Xml;
+			sourceTree = "<group>";
+		};
+		37DD47371265CD2C00CA0D47 /* Threading */ = {
+			isa = PBXGroup;
+			children = (
+				37A5A146122401F50078A4F3 /* VCMainThreadNotifier.h */,
+				37A5A147122401F50078A4F3 /* VCMainThreadNotifier.m */,
+				37731DCC12213F2400A97784 /* VCAsyncDownloader.h */,
+				37731DCD12213F2400A97784 /* VCAsyncDownloader.m */,
+			);
+			name = Threading;
+			sourceTree = "<group>";
+		};
+		37F38BB6126482C40044A2E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37DD47701265CFEA00CA0D47 /* VCLazyImageView.h */,
+				37DD47711265CFEA00CA0D47 /* VCLazyImageView.m */,
+				37DD47721265CFEA00CA0D47 /* VCLazyScrollView.h */,
+				37DD47731265CFEA00CA0D47 /* VCLazyScrollView.m */,
+				37DD47741265CFEA00CA0D47 /* VCStaticWebView.h */,
+				37DD47751265CFEA00CA0D47 /* VCStaticWebView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3761F406122416A1006098AE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3761F407122416A1006098AE /* ViciTouch_Prefix.pch in Headers */,
+				3761F408122416A1006098AE /* VCXmlParser.h in Headers */,
+				3761F409122416A1006098AE /* VCAsyncDownloader.h in Headers */,
+				3761F40A122416A1006098AE /* VCMainThreadNotifier.h in Headers */,
+				3761F40B122416A1006098AE /* VCDateHelper.h in Headers */,
+				37DD477C1265CFEA00CA0D47 /* VCLazyImageView.h in Headers */,
+				37DD477E1265CFEA00CA0D47 /* VCLazyScrollView.h in Headers */,
+				37DD47801265CFEA00CA0D47 /* VCStaticWebView.h in Headers */,
+				374ACA9B127CC37E0017CF13 /* VCDataObject.h in Headers */,
+				374ACA9D127CC37E0017CF13 /* VCDataStore.h in Headers */,
+				374ACA9F127CC37E0017CF13 /* VCSqlCommand.h in Headers */,
+				374ACAA1127CC37E0017CF13 /* VCSqlDataTypes.h in Headers */,
+				374ACAA3127CC37E0017CF13 /* VCSqlParameter.h in Headers */,
+				374ACAA5127CC37E0017CF13 /* VCSqlParameterList.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* ViciTouch_Prefix.pch in Headers */,
+				37731DBC12213E8B00A97784 /* VCXmlParser.h in Headers */,
+				37731DCE12213F2400A97784 /* VCAsyncDownloader.h in Headers */,
+				37A5A148122401F50078A4F3 /* VCMainThreadNotifier.h in Headers */,
+				37A5A178122408A00078A4F3 /* VCDateHelper.h in Headers */,
+				37DD47761265CFEA00CA0D47 /* VCLazyImageView.h in Headers */,
+				37DD47781265CFEA00CA0D47 /* VCLazyScrollView.h in Headers */,
+				37DD477A1265CFEA00CA0D47 /* VCStaticWebView.h in Headers */,
+				374ACA8F127CC37E0017CF13 /* VCDataObject.h in Headers */,
+				374ACA91127CC37E0017CF13 /* VCDataStore.h in Headers */,
+				374ACA93127CC37E0017CF13 /* VCSqlCommand.h in Headers */,
+				374ACA95127CC37E0017CF13 /* VCSqlDataTypes.h in Headers */,
+				374ACA97127CC37E0017CF13 /* VCSqlParameter.h in Headers */,
+				374ACA99127CC37E0017CF13 /* VCSqlParameterList.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3761F405122416A1006098AE /* ViciTouch4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3761F413122416A1006098AE /* Build configuration list for PBXNativeTarget "ViciTouch4" */;
+			buildPhases = (
+				3761F406122416A1006098AE /* Headers */,
+				3761F40C122416A1006098AE /* Sources */,
+				3761F411122416A1006098AE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViciTouch4;
+			productName = ViciTouch;
+			productReference = 3761F416122416A1006098AE /* libViciTouch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D2AAC07D0554694100DB518D /* ViciTouch3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ViciTouch3" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViciTouch3;
+			productName = ViciTouch;
+			productReference = D2AAC07E0554694100DB518D /* libViciTouch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ViciTouch" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* ViciTouch */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* ViciTouch3 */,
+				3761F405122416A1006098AE /* ViciTouch4 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3761F40C122416A1006098AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3761F40D122416A1006098AE /* VCXmlParser.m in Sources */,
+				3761F40E122416A1006098AE /* VCAsyncDownloader.m in Sources */,
+				3761F40F122416A1006098AE /* VCMainThreadNotifier.m in Sources */,
+				3761F410122416A1006098AE /* VCDateHelper.m in Sources */,
+				37DD477D1265CFEA00CA0D47 /* VCLazyImageView.m in Sources */,
+				37DD477F1265CFEA00CA0D47 /* VCLazyScrollView.m in Sources */,
+				37DD47811265CFEA00CA0D47 /* VCStaticWebView.m in Sources */,
+				374ACA9C127CC37E0017CF13 /* VCDataObject.m in Sources */,
+				374ACA9E127CC37E0017CF13 /* VCDataStore.m in Sources */,
+				374ACAA0127CC37E0017CF13 /* VCSqlCommand.m in Sources */,
+				374ACAA2127CC37E0017CF13 /* VCSqlDataTypes.m in Sources */,
+				374ACAA4127CC37E0017CF13 /* VCSqlParameter.m in Sources */,
+				374ACAA6127CC37E0017CF13 /* VCSqlParameterList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37731DBD12213E8B00A97784 /* VCXmlParser.m in Sources */,
+				37731DCF12213F2400A97784 /* VCAsyncDownloader.m in Sources */,
+				37A5A149122401F50078A4F3 /* VCMainThreadNotifier.m in Sources */,
+				37A5A179122408A00078A4F3 /* VCDateHelper.m in Sources */,
+				37DD47771265CFEA00CA0D47 /* VCLazyImageView.m in Sources */,
+				37DD47791265CFEA00CA0D47 /* VCLazyScrollView.m in Sources */,
+				37DD477B1265CFEA00CA0D47 /* VCStaticWebView.m in Sources */,
+				374ACA90127CC37E0017CF13 /* VCDataObject.m in Sources */,
+				374ACA92127CC37E0017CF13 /* VCDataStore.m in Sources */,
+				374ACA94127CC37E0017CF13 /* VCSqlCommand.m in Sources */,
+				374ACA96127CC37E0017CF13 /* VCSqlDataTypes.m in Sources */,
+				374ACA98127CC37E0017CF13 /* VCSqlParameter.m in Sources */,
+				374ACA9A127CC37E0017CF13 /* VCSqlParameterList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/ViciTouch.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ViciTouch;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/ViciTouch.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ViciTouch;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+		3761F414122416A1006098AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/ViciTouch.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ViciTouch;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Debug;
+		};
+		3761F415122416A1006098AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/ViciTouch.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ViciTouch;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ViciTouch3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ViciTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3761F413122416A1006098AE /* Build configuration list for PBXNativeTarget "ViciTouch4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3761F414122416A1006098AE /* Debug */,
+				3761F415122416A1006098AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
