@@ -72,6 +72,18 @@
 		AC87F686133D48D20029B9C0 /* UIView+Positioning.h in Headers */ = {isa = PBXBuildFile; fileRef = AC87F683133D48D20029B9C0 /* UIView+Positioning.h */; };
 		AC87F687133D48D20029B9C0 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = AC87F684133D48D20029B9C0 /* UIView+Positioning.m */; };
 		AC87F688133D48D20029B9C0 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = AC87F684133D48D20029B9C0 /* UIView+Positioning.m */; };
+		ACB4F0A71348C140005E7FCF /* VCSqlFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0A51348C140005E7FCF /* VCSqlFunction.h */; };
+		ACB4F0A81348C140005E7FCF /* VCSqlFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0A51348C140005E7FCF /* VCSqlFunction.h */; };
+		ACB4F0A91348C140005E7FCF /* VCSqlFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0A61348C140005E7FCF /* VCSqlFunction.m */; };
+		ACB4F0AA1348C140005E7FCF /* VCSqlFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0A61348C140005E7FCF /* VCSqlFunction.m */; };
+		ACB4F0AE1348C175005E7FCF /* VCCache.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0AC1348C174005E7FCF /* VCCache.h */; };
+		ACB4F0AF1348C175005E7FCF /* VCCache.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0AC1348C174005E7FCF /* VCCache.h */; };
+		ACB4F0B01348C175005E7FCF /* VCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0AD1348C174005E7FCF /* VCCache.m */; };
+		ACB4F0B11348C175005E7FCF /* VCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0AD1348C174005E7FCF /* VCCache.m */; };
+		ACB4F0B41348C18D005E7FCF /* VCUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0B21348C18D005E7FCF /* VCUtil.h */; };
+		ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0B21348C18D005E7FCF /* VCUtil.h */; };
+		ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
+		ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +121,12 @@
 		AC87F677133D47260029B9C0 /* UIView+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Resizing.m"; path = "Classes/UIView+Resizing.m"; sourceTree = "<group>"; };
 		AC87F683133D48D20029B9C0 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Positioning.h"; path = "Classes/UIView+Positioning.h"; sourceTree = "<group>"; };
 		AC87F684133D48D20029B9C0 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Positioning.m"; path = "Classes/UIView+Positioning.m"; sourceTree = "<group>"; };
+		ACB4F0A51348C140005E7FCF /* VCSqlFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSqlFunction.h; sourceTree = "<group>"; };
+		ACB4F0A61348C140005E7FCF /* VCSqlFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSqlFunction.m; sourceTree = "<group>"; };
+		ACB4F0AC1348C174005E7FCF /* VCCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCCache.h; path = Classes/VCCache.h; sourceTree = "<group>"; };
+		ACB4F0AD1348C174005E7FCF /* VCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCCache.m; path = Classes/VCCache.m; sourceTree = "<group>"; };
+		ACB4F0B21348C18D005E7FCF /* VCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCUtil.h; path = Classes/VCUtil.h; sourceTree = "<group>"; };
+		ACB4F0B31348C18D005E7FCF /* VCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCUtil.m; path = Classes/VCUtil.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libViciTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViciTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,8 +188,12 @@
 				37F38BB6126482C40044A2E3 /* Views */,
 				37731DE012213F6F00A97784 /* Xml */,
 				AC87F668133D40F00029B9C0 /* Categories */,
+				ACB4F0AC1348C174005E7FCF /* VCCache.h */,
+				ACB4F0AD1348C174005E7FCF /* VCCache.m */,
 				37A5A176122408A00078A4F3 /* VCDateHelper.h */,
 				37A5A177122408A00078A4F3 /* VCDateHelper.m */,
+				ACB4F0B21348C18D005E7FCF /* VCUtil.h */,
+				ACB4F0B31348C18D005E7FCF /* VCUtil.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -195,6 +217,8 @@
 				374ACA88127CC37E0017CF13 /* VCSqlCommand.m */,
 				374ACA89127CC37E0017CF13 /* VCSqlDataTypes.h */,
 				374ACA8A127CC37E0017CF13 /* VCSqlDataTypes.m */,
+				ACB4F0A51348C140005E7FCF /* VCSqlFunction.h */,
+				ACB4F0A61348C140005E7FCF /* VCSqlFunction.m */,
 				374ACA8B127CC37E0017CF13 /* VCSqlParameter.h */,
 				374ACA8C127CC37E0017CF13 /* VCSqlParameter.m */,
 				374ACA8D127CC37E0017CF13 /* VCSqlParameterList.h */,
@@ -271,6 +295,9 @@
 				374ACAA5127CC37E0017CF13 /* VCSqlParameterList.h in Headers */,
 				AC87F679133D47260029B9C0 /* UIView+Resizing.h in Headers */,
 				AC87F686133D48D20029B9C0 /* UIView+Positioning.h in Headers */,
+				ACB4F0A81348C140005E7FCF /* VCSqlFunction.h in Headers */,
+				ACB4F0AF1348C175005E7FCF /* VCCache.h in Headers */,
+				ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +321,9 @@
 				374ACA99127CC37E0017CF13 /* VCSqlParameterList.h in Headers */,
 				AC87F678133D47260029B9C0 /* UIView+Resizing.h in Headers */,
 				AC87F685133D48D20029B9C0 /* UIView+Positioning.h in Headers */,
+				ACB4F0A71348C140005E7FCF /* VCSqlFunction.h in Headers */,
+				ACB4F0AE1348C175005E7FCF /* VCCache.h in Headers */,
+				ACB4F0B41348C18D005E7FCF /* VCUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +410,9 @@
 				374ACAA6127CC37E0017CF13 /* VCSqlParameterList.m in Sources */,
 				AC87F67B133D47260029B9C0 /* UIView+Resizing.m in Sources */,
 				AC87F688133D48D20029B9C0 /* UIView+Positioning.m in Sources */,
+				ACB4F0AA1348C140005E7FCF /* VCSqlFunction.m in Sources */,
+				ACB4F0B11348C175005E7FCF /* VCCache.m in Sources */,
+				ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +435,9 @@
 				374ACA9A127CC37E0017CF13 /* VCSqlParameterList.m in Sources */,
 				AC87F67A133D47260029B9C0 /* UIView+Resizing.m in Sources */,
 				AC87F687133D48D20029B9C0 /* UIView+Positioning.m in Sources */,
+				ACB4F0A91348C140005E7FCF /* VCSqlFunction.m in Sources */,
+				ACB4F0B01348C175005E7FCF /* VCCache.m in Sources */,
+				ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
