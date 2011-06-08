@@ -31,14 +31,13 @@
 	NSDictionary *_userInfo;
 }
 
-+ (void) notify:(NSString *)name userInfo:(NSDictionary *)userInfo afterDelay:(float) seconds;
++ (void) notify:(NSString *)name userInfo:(NSDictionary *)userInfo afterDelay:(float)seconds;
 + (void) notify:(NSString *)name userInfo:(NSDictionary *)userInfo;
-+ (void) notify:(NSString *)name object:(id) object userInfo:(NSDictionary *)userInfo afterDelay:(float) seconds;
-+ (void) notify:(NSString *)name object:(id) object userInfo:(NSDictionary *)userInfo;
-+ (void) notify:(NSString *)name object:(id) object afterDelay:(float) seconds;
-+ (void) notify:(NSString *)name object:(id) object;
++ (void) notify:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo afterDelay:(float)seconds;
++ (void) notify:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo;
++ (void) notify:(NSString *)name object:(id)object afterDelay:(float)seconds;
++ (void) notify:(NSString *)name object:(id)object;
 + (void) notify:(NSString *)name afterDelay:(float)seconds;
 + (void) notify:(NSString *)name;
-
 
 @end

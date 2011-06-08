@@ -26,22 +26,22 @@
 
 @interface VCMainThreadNotifier()
 
-- (id) initWithName:(NSString *)name object:(id) object userInfo:(NSDictionary *)userInfo;
+- (id) initWithName:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo;
 
 - (void) notify;
-- (void) notifyAfterDelay:(float) seconds;
+- (void) notifyAfterDelay:(float)seconds;
 
 - (void) postNotification;
-- (void) postNotificationAfterDelay:(NSNumber *) seconds;
+- (void) postNotificationAfterDelay:(NSNumber *)seconds;
 
 @end
 
 
 @implementation VCMainThreadNotifier
 
-- (id) initWithName:(NSString *)name object:(id) object userInfo:(NSDictionary *)userInfo 
+- (id) initWithName:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo 
 {
-	if (self = [super init]) 
+	if ((self = [super init])) 
 	{
 		_name = [name retain];
 		_object = [object retain];
@@ -60,7 +60,7 @@
 	[self release];
 }
 
-- (void) postNotificationAfterDelay:(NSNumber *) seconds 
+- (void) postNotificationAfterDelay:(NSNumber *)seconds 
 {
 	[self performSelector:@selector(postNotification) withObject:nil afterDelay:[seconds floatValue]];
 }
@@ -70,12 +70,12 @@
 	[self performSelectorOnMainThread:@selector(postNotification) withObject:nil waitUntilDone:NO];
 }
 
-- (void) notifyAfterDelay:(float) seconds 
+- (void) notifyAfterDelay:(float)seconds 
 {
 	[self performSelectorOnMainThread:@selector(postNotificationAfterDelay:) withObject:[NSNumber numberWithFloat:seconds] waitUntilDone:NO];
 }
 
-+ (void) notify:(NSString *)name object:(id) object userInfo:(NSDictionary *)userInfo afterDelay:(float) seconds 
++ (void) notify:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo afterDelay:(float)seconds 
 {
 	VCMainThreadNotifier *notifier = [[VCMainThreadNotifier alloc] initWithName:name object:object userInfo:userInfo];
 	
@@ -84,7 +84,7 @@
 	[notifier release];
 }
 
-+ (void) notify:(NSString *)name object:(id) object userInfo:(NSDictionary *)userInfo 
++ (void) notify:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo 
 {
 	VCMainThreadNotifier *notifier = [[VCMainThreadNotifier alloc] initWithName:name object:object userInfo:userInfo];
 	
@@ -93,23 +93,23 @@
 	[notifier release];
 }
 
-+ (void) notify:(NSString *)name userInfo:(NSDictionary *)userInfo afterDelay:(float) seconds 
++ (void) notify:(NSString *)name userInfo:(NSDictionary *)userInfo afterDelay:(float)seconds 
 {
 	[VCMainThreadNotifier notify:name object:nil userInfo:userInfo afterDelay:seconds];
 }
 
-+ (void) notify:(NSString *)name afterDelay:(float) seconds 
++ (void) notify:(NSString *)name afterDelay:(float)seconds 
 {
 	[VCMainThreadNotifier notify:name object:nil userInfo:nil afterDelay:seconds];
 }
 
 
-+ (void) notify:(NSString *)name object:(id) object afterDelay:(float) seconds 
++ (void) notify:(NSString *)name object:(id)object afterDelay:(float)seconds 
 {
 	[VCMainThreadNotifier notify:name object:object userInfo:nil afterDelay:seconds];
 }
 
-+ (void) notify:(NSString *)name object:(id) object 
++ (void) notify:(NSString *)name object:(id)object 
 {
 	[VCMainThreadNotifier notify:name object:object userInfo:nil];
 }

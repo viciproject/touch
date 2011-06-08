@@ -37,16 +37,16 @@
 
 @interface VCLazyImageView : UIView 
 {
-	NSMutableData * _receivedData;
+	NSMutableData *_receivedData;
 	
-	UIActivityIndicatorView * _spinnerView;
-	UIImageView * _imageView;
+	UIActivityIndicatorView *_spinnerView;
+	UIImageView *_imageView;
 	
-	NSString * _backupImageName;
+	NSString *_backupImageName;
 	
-	NSURLConnection * _urlConnection;
+	NSURLConnection *_urlConnection;
 	
-	NSString * _url;
+	NSString *_url;
     
     BOOL _useCaching;
 	

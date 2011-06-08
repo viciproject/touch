@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2009-2010 Philippe Leybaert
+// Copyright (c) 2010-2011 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -28,10 +28,10 @@
 
 @interface VCDataStore()
 
-- (void) instanceStopped:(NSNotification *) notification;
+- (void) instanceStopped:(NSNotification *)notification;
 + (VCDataStore *) instance;
-- (int) execCommand: (VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int)) callback data:(void *)data;
-- (int) execCommand: (VCSqlCommand *)cmd;
+- (int) execCommand:(VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int))callback data:(void *)data;
+- (int) execCommand:(VCSqlCommand *)cmd;
 - (int) lastRowId;
 - (sqlite3 *) openDb;
 
@@ -64,7 +64,7 @@ static NSMutableArray *sqlFunctions = nil;
 	return instance;
 }
 
-- (void) instanceStopped:(NSNotification *) notification 
+- (void) instanceStopped:(NSNotification *)notification 
 {
 	NSThread *currentThread = [NSThread currentThread];
 	
@@ -82,7 +82,7 @@ static NSMutableArray *sqlFunctions = nil;
 	dbName = [db copy];
 }
 
-+ (void) addFunction:(NSString *) name function:(void (*)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3))function numArguments:(int) numArguments
++ (void) addFunction:(NSString *)name function:(void (*)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3))function numArguments:(int) numArguments
 {
 	@synchronized(self)
 	{
@@ -95,14 +95,15 @@ static NSMutableArray *sqlFunctions = nil;
 
 - (id) init 
 {
-	if (self = [super init]) {
+	if ((self = [super init])) 
+    {
 		_db = [self openDb];
 	}
 	
 	return self;
 }
 
-+ (int) execCommand: (VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int)) callback data:(void *)data
++ (int) execCommand:(VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int))callback data:(void *)data
 {
 	return [[self instance] execCommand:cmd callback:callback data:data];
 }
@@ -116,7 +117,6 @@ static NSMutableArray *sqlFunctions = nil;
 {
 	return [[self instance] lastRowId];
 }
-
 
 - (sqlite3 *) openDb 
 {
@@ -159,9 +159,8 @@ static NSMutableArray *sqlFunctions = nil;
 	return [self execCommand:cmd callback:nil data:nil];
 }
 
-- (int) execCommand: (VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int)) callback data:(void *)data 
+- (int) execCommand:(VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int))callback data:(void *)data 
 {
-
 //	NSLog(@"SQL: %@",cmd.sql);
 
 	sqlite3_stmt *stmt;
@@ -309,7 +308,6 @@ void GetScalarString_callback(int mode, void *obj, const char *fieldName, const 
 	}
 }
 
-
 + (int) getScalar:(VCSqlCommand *)cmd 
 {
 	int returnValue;
@@ -327,7 +325,6 @@ void GetScalarString_callback(int mode, void *obj, const char *fieldName, const 
 	
 	return [returnValue autorelease];
 }
-
 
 - (void) dealloc 
 {

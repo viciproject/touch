@@ -31,7 +31,7 @@
 @synthesize function = _function;
 @synthesize numArguments = _numArguments;
 
-+ (VCSqlFunction *) functionWithName:(NSString *) name function:(void (*)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3))function numArguments:(int) numArguments
++ (VCSqlFunction *) functionWithName:(NSString *)name function:(void (*)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3))function numArguments:(int)numArguments
 {
 	VCSqlFunction *func = [[VCSqlFunction alloc] init];
 	

@@ -26,23 +26,25 @@
 
 @class VCXmlElement;
 
-@interface VCXmlParser : NSObject<NSXMLParserDelegate> {
-	void * _parserState;
-	VCXmlElement * _currentElement;
-	NSMutableDictionary * _elementHandlers;
+@interface VCXmlParser : NSObject<NSXMLParserDelegate> 
+{
+	void *_parserState;
+	VCXmlElement *_currentElement;
+	NSMutableDictionary *_elementHandlers;
 }
 
 - (void) parseData:(NSData *) data;
 - (void) parseUrl:(NSString *) url;
 - (void) parseFile:(NSString *) file;
 
-- (void) addHandler:(NSString *)tag selector:(SEL) selector;
+- (void) addHandler:(NSString *)tag selector:(SEL)selector;
 
 @end
 
-@interface VCXmlElement : NSObject {
-	NSString * _elementName;
-	NSDictionary * _attributes;
+@interface VCXmlElement : NSObject 
+{
+	NSString *_elementName;
+	NSDictionary *_attributes;
 }
 
 @end

@@ -72,7 +72,7 @@ void DataObject_callback(int mode, void *obj, const char *fieldName, const void 
 
 - (id) init 
 {
-	if (self = [super init]) 
+	if ((self = [super init])) 
 	{
 		isNew = YES;
 	}
@@ -145,35 +145,35 @@ void DataObject_callback(int mode, void *obj, const char *fieldName, const void 
 }
 
 
-+ (NSArray *) readMultiple:(NSString *) filter 
++ (NSArray *) readMultiple:(NSString *)filter 
 {
 	VCSqlCommand *cmd = [VCSqlCommand sqlCommandFromTable:[self tableName] filter:filter];
 	
 	return [self readMultipleWithCmd:cmd];
 }
 
-+ (NSArray *) readMultiple:(NSString *) filter sortBy: (NSString *) sortBy 
++ (NSArray *) readMultiple:(NSString *)filter sortBy:(NSString *)sortBy 
 {
 	VCSqlCommand *cmd = [VCSqlCommand sqlCommandFromTable:[self tableName] filter:filter sortBy:sortBy];
 	
 	return [self readMultipleWithCmd:cmd];
 }
 
-+ (NSArray *) readMultiple:(NSString *) filter parameters:(VCSqlParameterList *) parameters 
++ (NSArray *) readMultiple:(NSString *)filter parameters:(VCSqlParameterList *)parameters 
 {
 	VCSqlCommand *cmd = [VCSqlCommand sqlCommandFromTable:[self tableName] filter:filter parameters:parameters];
 	
 	return [self readMultipleWithCmd:cmd];
 }
 
-+ (NSArray *) readMultiple:(NSString *) filter parameters:(VCSqlParameterList *) parameters sortBy:(NSString *)sortBy 
++ (NSArray *) readMultiple:(NSString *)filter parameters:(VCSqlParameterList *)parameters sortBy:(NSString *)sortBy 
 {
 	VCSqlCommand *cmd = [VCSqlCommand sqlCommandFromTable:[self tableName] filter:filter parameters:parameters sortBy:sortBy];
 	
 	return [self readMultipleWithCmd:cmd];
 }
 
-- (void) storeField:(const char *) fieldName value:(const void *)value length:(int) length {}
+- (void) storeField:(const char *)fieldName value:(const void *)value length:(int)length {}
 - (VCSqlCommand *) saveCommand { return nil; }
 
 @end

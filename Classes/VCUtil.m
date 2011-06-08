@@ -28,7 +28,7 @@
 
 @implementation VCUtil
 
-+ (NSString *)documentsPath 
++ (NSString *) documentsPath 
 {
 	NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	
@@ -47,12 +47,12 @@
 	return [[NSBundle mainBundle] resourcePath];
 }
 
-+ (NSString *)fileInDocumentsPath:(NSString *)fileName
++ (NSString *) fileInDocumentsPath:(NSString *)fileName
 {
 	return [[self documentsPath] stringByAppendingPathComponent:fileName];
 }
 
-+ (NSString *)fileInMainBundlePath:(NSString *)fileName
++ (NSString *) fileInMainBundlePath:(NSString *)fileName
 {
 	return [[self mainBundlePath] stringByAppendingPathComponent:fileName];
 }

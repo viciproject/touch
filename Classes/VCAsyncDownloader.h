@@ -26,9 +26,9 @@
 
 @interface VCAsyncDownloader : NSObject 
 {
-	NSURL * _url;
-	NSMutableData * _data;
-	NSURLConnection * _connection;
+	NSURL *_url;
+	NSMutableData *_data;
+	NSURLConnection *_connection;
 	
 	BOOL _onMainThread;
 	
@@ -41,21 +41,21 @@
 @property (assign) id delegate;
 @property (assign) BOOL useMainThread;
 
-- (id) initWithUrl:(NSString *) url;
+- (id) initWithUrl:(NSString *)url;
 - (void) start;
-- (void) start:(id) userData;
+- (void) start:(id)userData;
 - (void) cancel;
 
-+ (VCAsyncDownloader *) asyncDownloaderWithUrl:(NSString *) url;
++ (VCAsyncDownloader *) asyncDownloaderWithUrl:(NSString *)url;
 
-+ (void) start:(NSString *)url delegate:(id) delegate;
-+ (void) start:(NSString *)url delegate:(id) delegate onMainThread:(BOOL) onMainThread;
-+ (void) start:(NSString *)url delegate:(id) delegate userData:(id) userData;
-+ (void) start:(NSString *)url delegate:(id) delegate userData:(id) userData onMainThread:(BOOL) onMainThread;
++ (void) start:(NSString *)url delegate:(id)delegate;
++ (void) start:(NSString *)url delegate:(id)delegate onMainThread:(BOOL)onMainThread;
++ (void) start:(NSString *)url delegate:(id)delegate userData:(id)userData;
++ (void) start:(NSString *)url delegate:(id)delegate userData:(id)userData onMainThread:(BOOL)onMainThread;
 
 @end
 
 @interface NSObject(AsyncDownloaderDelegate)
-- (void) asyncDownloadCompleted: (VCAsyncDownloader *) asyncDownloader;
-- (void) asyncDownloadFailed: (VCAsyncDownloader *) asyncDownloader;
+- (void) asyncDownloadCompleted:(VCAsyncDownloader *)asyncDownloader;
+- (void) asyncDownloadFailed:(VCAsyncDownloader *)asyncDownloader;
 @end

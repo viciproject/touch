@@ -37,6 +37,6 @@
 @property (nonatomic,readonly) void (*function)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3);
 @property (nonatomic,readonly) int numArguments;
 
-+ (VCSqlFunction *) functionWithName:(NSString *) name function:(void (*)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3))function numArguments:(int) numArguments;
++ (VCSqlFunction *) functionWithName:(NSString *)name function:(void (*)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3))function numArguments:(int)numArguments;
 
 @end

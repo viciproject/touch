@@ -27,8 +27,8 @@
 
 @interface VCSqlParameter : NSObject 
 {
-	NSString * _name;
-	NSString * _value;
+	NSString *_name;
+	NSString *_value;
 	int _dataType;
 }
 
