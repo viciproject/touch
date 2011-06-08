@@ -33,7 +33,7 @@
 	BOOL isNew;
 }
 
-- (void) storeField:(const char *) fieldName value:(const void *)value length:(int) length;
+- (void) storeField:(const char *)fieldName value:(const void *)value length:(int)length;
 - (VCSqlCommand *) saveCommand;
 
 - (BOOL) save;
@@ -47,14 +47,14 @@
 
 + (NSArray *) readAll;
 + (NSArray *) readAll:(NSString *)sortBy;
-+ (NSArray *) readMultiple:(NSString *) filter parameters:(VCSqlParameterList *) parameters;
-+ (NSArray *) readMultiple:(NSString *) filter;
-+ (NSArray *) readMultiple:(NSString *) filter parameters:(VCSqlParameterList *) parameters sortBy:(NSString *)sortBy;
-+ (NSArray *) readMultiple:(NSString *) filter sortBy:(NSString *)sortBy;
++ (NSArray *) readMultiple:(NSString *)filter parameters:(VCSqlParameterList *)parameters;
++ (NSArray *) readMultiple:(NSString *)filter;
++ (NSArray *) readMultiple:(NSString *)filter parameters:(VCSqlParameterList *)parameters sortBy:(NSString *)sortBy;
++ (NSArray *) readMultiple:(NSString *)filter sortBy:(NSString *)sortBy;
 
 @end
 
-@interface VCDataObject(Identifiers)
+@interface VCDataObject (Identifiers)
 
 + (NSString *) tableName;
 

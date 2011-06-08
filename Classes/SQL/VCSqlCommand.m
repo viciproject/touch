@@ -41,7 +41,7 @@
 
 - (id) init 
 {
-	if (self = [super init]) 
+	if ((self = [super init])) 
 	{
 		_sqlParameters = [[VCSqlParameterList alloc] init];
 		_sql = nil;
@@ -50,7 +50,7 @@
 	return self;
 }
 
-+ (id) sqlCommandFromSql:(NSString *) sql parameters:(VCSqlParameterList *)parameters 
++ (id) sqlCommandFromSql:(NSString *)sql parameters:(VCSqlParameterList *)parameters 
 {
 	VCSqlCommand *cmd = [[VCSqlCommand alloc] init];
 	
@@ -60,7 +60,7 @@
 	return [cmd autorelease];
 }
 
-+ (id) sqlCommandFromSql:(NSString *) sql 
++ (id) sqlCommandFromSql:(NSString *)sql 
 {
 	VCSqlCommand *cmd = [[VCSqlCommand alloc] init];
 	
@@ -69,12 +69,12 @@
 	return [cmd autorelease];
 }
 
-+ (id) sqlCommandFromTable:(NSString *) tableName 
++ (id) sqlCommandFromTable:(NSString *)tableName 
 {
 	return [VCSqlCommand sqlCommandFromSql:[NSString stringWithFormat:@"select * from %@",tableName]];
 }
 
-+ (id) sqlCommandFromTable:(NSString *) tableName sortBy:(NSString *)sortBy 
++ (id) sqlCommandFromTable:(NSString *)tableName sortBy:(NSString *)sortBy 
 {
 	VCSqlCommand *cmd = [self sqlCommandFromTable:tableName];
 	
@@ -83,7 +83,7 @@
 	return cmd;
 }
 
-+ (id) sqlCommandFromTable:(NSString *) tableName filter:(NSString *) filter 
++ (id) sqlCommandFromTable:(NSString *)tableName filter:(NSString *)filter 
 {
 	VCSqlCommand *cmd = [[VCSqlCommand alloc] init];
 	
@@ -98,7 +98,7 @@
 	return [cmd autorelease];
 }
 
-+ (id) sqlCommandFromTable:(NSString *) tableName filter:(NSString *) filter sortBy:(NSString *)sortBy 
++ (id) sqlCommandFromTable:(NSString *)tableName filter:(NSString *)filter sortBy:(NSString *)sortBy 
 {
 	VCSqlCommand *cmd = [self sqlCommandFromTable:tableName filter:filter];
 	
@@ -107,7 +107,7 @@
 	return cmd;
 }
 
-+ (id) sqlCommandFromTable:(NSString *) tableName filter:(NSString *) filter parameters:(VCSqlParameterList *)parameters 
++ (id) sqlCommandFromTable:(NSString *)tableName filter:(NSString *)filter parameters:(VCSqlParameterList *)parameters 
 {
 	VCSqlCommand *cmd = [[VCSqlCommand alloc] init];
 	
@@ -123,7 +123,7 @@
 	return [cmd autorelease];
 }
 
-+ (id) sqlCommandFromTable:(NSString *) tableName filter:(NSString *) filter parameters:(VCSqlParameterList *)parameters sortBy:(NSString *) sortBy 
++ (id) sqlCommandFromTable:(NSString *)tableName filter:(NSString *)filter parameters:(VCSqlParameterList *)parameters sortBy:(NSString *)sortBy 
 {
 	VCSqlCommand *cmd = [self sqlCommandFromTable:tableName filter:filter parameters:parameters];
 	
@@ -137,7 +137,7 @@
 	[self.sqlParameters merge:parameters];
 }
 
-- (void) addParameter:(id) value withName:(NSString *)name 
+- (void) addParameter:(id)value withName:(NSString *)name 
 {
 	[self.sqlParameters setValue:value forName:name];
 }

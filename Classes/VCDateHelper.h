@@ -28,32 +28,32 @@
 {
 }
 
-+ (NSString *) stringFromDate:(NSDate *) date formatString:(NSString *) formatString;
-+ (NSDate *) dateFromString:(NSString *) date formatString:(NSString *) formatString;
++ (NSString *) stringFromDate:(NSDate *)date formatString:(NSString *)formatString;
++ (NSDate *) dateFromString:(NSString *)date formatString:(NSString *)formatString;
 
 + (NSDate *) stripTime:(NSDate *)date;
-+ (NSDate *) addDays:(NSDate *)date days:(int) days;
-+ (NSDate *) addHours:(NSDate *)date hours:(int) h;
-+ (NSDate *) addMinutes:(NSDate *)date minutes:(int) minutes;
-+ (NSDate *) addSeconds:(NSDate *)date seconds:(float) seconds;
++ (NSDate *) addDays:(NSDate *)date days:(int)days;
++ (NSDate *) addHours:(NSDate *)date hours:(int)hours;
++ (NSDate *) addMinutes:(NSDate *)date minutes:(int)minutes;
++ (NSDate *) addSeconds:(NSDate *)date seconds:(float)seconds;
 
 @end
 
 @interface NSString(DateHelper)
 
-- (NSDate *) dateFromStringWithFormat:(NSString *) formatString;
+- (NSDate *) dateFromStringWithFormat:(NSString *)formatString;
 - (NSDate *) dateFromStringWithFormatter:(NSDateFormatter *)dateFormatter;
 
 @end
 
 @interface NSDate(DateHelper)
 
-- (NSString *) stringFromDateWithFormat:(NSString *) formatString;
+- (NSString *) stringFromDateWithFormat:(NSString *)formatString;
 - (NSString *) stringFromDateWithFormatter:(NSDateFormatter *)dateFormatter;
 - (NSDate *) stripTime;
-- (NSDate *) addDays:(int) days;
-- (NSDate *) addHours:(double) h; 
-- (NSDate *) addMinutes:(int) minutes;
-- (NSDate *) addSeconds:(float) seconds;
+- (NSDate *) addDays:(int)days;
+- (NSDate *) addHours:(double)hours; 
+- (NSDate *) addMinutes:(int)minutes;
+- (NSDate *) addSeconds:(float)seconds;
 
 @end

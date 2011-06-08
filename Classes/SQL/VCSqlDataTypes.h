@@ -25,7 +25,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface VCSqlDataTypes : NSObject {
+@interface VCSqlDataTypes : NSObject 
+{
 }
 
 @end

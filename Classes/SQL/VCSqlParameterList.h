@@ -27,7 +27,7 @@
 
 @interface VCSqlParameterList : NSObject<NSFastEnumeration> 
 {
-	NSMutableDictionary * _dic;
+	NSMutableDictionary *_dic;
 }
 
 @property (readonly,nonatomic,retain) NSMutableDictionary *dic;
@@ -36,7 +36,7 @@
 - (void) setValue:(id)value forName:(NSString *)name;
 - (id) valueForName:(NSString *)name;
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
+- (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
 + (VCSqlParameterList *) from:(NSString *)firstParameterName, ...;
 

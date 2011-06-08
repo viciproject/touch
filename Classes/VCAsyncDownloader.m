@@ -37,9 +37,9 @@
 @synthesize userData = _userData;
 @synthesize useMainThread = _onMainThread;
 
-- (id) initWithUrl:(NSString *) url 
+- (id) initWithUrl:(NSString *)url 
 {
-	if (self = [super init]) 
+	if ((self = [super init])) 
 	{
 		_url = [[NSURL alloc] initWithString:url];
 		
@@ -49,29 +49,29 @@
 	return self;
 }
 
-+ (VCAsyncDownloader *) asyncDownloaderWithUrl:(NSString *) url 
++ (VCAsyncDownloader *) asyncDownloaderWithUrl:(NSString *)url 
 {
 	VCAsyncDownloader *instance = [[VCAsyncDownloader alloc] initWithUrl:url];
 	
 	return [instance autorelease];
 }
 
-+ (void) start:(NSString *)url delegate:(id) delegate 
++ (void) start:(NSString *)url delegate:(id)delegate 
 {
 	[self start:url delegate:delegate userData:nil onMainThread:NO];
 }
 
-+ (void) start:(NSString *)url delegate:(id) delegate onMainThread:(BOOL) onMainThread 
++ (void) start:(NSString *)url delegate:(id)delegate onMainThread:(BOOL)onMainThread 
 {
 	[self start:url delegate:delegate userData:nil onMainThread:onMainThread];
 }
 
-+ (void) start:(NSString *)url delegate:(id) delegate userData:(id) userData 
++ (void) start:(NSString *)url delegate:(id)delegate userData:(id)userData 
 {
 	[self start:url delegate:delegate userData:userData onMainThread:NO];
 }
 
-+ (void) start:(NSString *)url delegate:(id) delegate userData:(id) userData onMainThread:(BOOL) onMainThread 
++ (void) start:(NSString *)url delegate:(id)delegate userData:(id)userData onMainThread:(BOOL)onMainThread 
 {
 	VCAsyncDownloader *downloader = [[VCAsyncDownloader alloc] initWithUrl:url];
 	
@@ -84,7 +84,7 @@
 	[downloader release];
 }
 
-- (void) start:(id) userData 
+- (void) start:(id)userData 
 {
 	self.userData = userData;
 	
@@ -141,8 +141,8 @@
 	[self release];
 }
 
-- (void) dealloc {
-	
+- (void) dealloc 
+{
 	[_url release];
 	[_data release];
 	[_connection release];

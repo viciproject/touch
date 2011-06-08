@@ -26,7 +26,7 @@
 
 @implementation VCXmlParser
 
-- (void) parseData:(NSData *) data 
+- (void) parseData:(NSData *)data 
 {
 	NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
 	
@@ -35,16 +35,16 @@
 	[parser release];
 }
 
-- (void) parseUrl:(NSString *) url 
+- (void) parseUrl:(NSString *)url 
 {
 }
 
-- (void) parseFile:(NSString *) file 
+- (void) parseFile:(NSString *)file 
 {
 	
 }
 
-- (void) addHandler:(NSString *)tag selector:(SEL) selector 
+- (void) addHandler:(NSString *)tag selector:(SEL)selector 
 {
 	[_elementHandlers setObject:[NSValue valueWithPointer:selector] forKey:tag];
 }

@@ -37,7 +37,7 @@
 
 - (id) init 
 {
-	if (self = [super init]) 
+	if ((self = [super init])) 
 	{
 		_dic = [[NSMutableDictionary alloc] init];
 	}
@@ -70,7 +70,7 @@
 	return [self.dic objectForKey:name];
 }
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len 
+- (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len 
 {
 	return [self.dic countByEnumeratingWithState:state objects:stackbuf count:len];
 }

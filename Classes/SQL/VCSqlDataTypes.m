@@ -60,4 +60,5 @@ static void createFormatter()
 	
 	return [formatter stringFromDate:self];
 }
+
 @end

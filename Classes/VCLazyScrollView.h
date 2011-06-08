@@ -29,16 +29,17 @@
 @protocol VCLazyScrollViewDelegate<UIScrollViewDelegate>
 @optional
 
-- (UIView *) lazyScrollView:(VCLazyScrollView *)scrollView setupSubView:(UIView *)recycledView withFrame:(CGRect) frame forIndex:(int) index;
-- (void) lazyScrollView:(VCLazyScrollView *)scrollView subViewWillRecycle:(UIView *)subView forIndex:(int) index;
+- (UIView *) lazyScrollView:(VCLazyScrollView *)scrollView setupSubView:(UIView *)recycledView withFrame:(CGRect)frame forIndex:(int)index;
+- (void) lazyScrollView:(VCLazyScrollView *)scrollView subViewWillRecycle:(UIView *)subView forIndex:(int)index;
 - (int) lazyScrollViewItemCount:(VCLazyScrollView *)scrollView;
 - (void) lazyScrollView:(VCLazyScrollView *)scrollView currentIndexChanged:(int)index;
 
 @end
 
-@interface VCLazyScrollView : UIScrollView<UIScrollViewDelegate> {
-	NSMutableSet * _visibleViews;
-	NSMutableSet * _recycledViews;
+@interface VCLazyScrollView : UIScrollView<UIScrollViewDelegate> 
+{
+	NSMutableSet *_visibleViews;
+	NSMutableSet *_recycledViews;
 	
 	int _currentIndex;
 	
@@ -51,7 +52,7 @@
 @property (nonatomic,assign) int currentIndex;
 @property (nonatomic,readonly) NSSet *visibleViews;
 
-- (void) setCurrentIndex:(int) index animated:(BOOL)animated;
+- (void) setCurrentIndex:(int)index animated:(BOOL)animated;
 - (void) forceLayout;
 - (void) reloadData;
 

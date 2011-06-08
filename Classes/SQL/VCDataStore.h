@@ -32,8 +32,8 @@
 
 @interface VCDataStore : NSObject 
 {
-	NSString * _dbFileName;
-	sqlite3 * _db;
+	NSString *_dbFileName;
+	sqlite3 *_db;
 }
 
 #define DATA_CALLBACK_STARTREADING (1)
@@ -45,16 +45,16 @@
 
 
 + (void) setDatabase:(NSString *)db;
-+ (void) addFunction:(NSString *) name function:(void (*)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3))function numArguments:(int) numArguments;
++ (void) addFunction:(NSString *)name function:(void (*)(sqlite3_context *arg1,int arg2, sqlite3_value **arg3))function numArguments:(int)numArguments;
 
-+ (int) execCommand: (VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int)) callback data:(void *)data;
-+ (int) execCommand: (VCSqlCommand *)cmd;
++ (int) execCommand:(VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int))callback data:(void *)data;
++ (int) execCommand:(VCSqlCommand *)cmd;
 
 + (int) getScalar:(VCSqlCommand *)cmd;
 + (NSString *) getScalarString:(VCSqlCommand *)cmd;
 
 /*
-- (NSDictionary *) readRecord: (SqlCommand *)cmd;
+- (NSDictionary *) readRecord:(SqlCommand *)cmd;
 - (NSArray *) readRecords:(SqlCommand *)cmd;
 */
 
