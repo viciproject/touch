@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2009-2010 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -57,6 +57,8 @@ static NSMutableArray *sqlFunctions = nil;
 		[[NSNotificationCenter defaultCenter] addObserver:instance selector:@selector(instanceStopped:) name:NSThreadWillExitNotification object:currentThread];
 
 		[threadData setValue:instance forKey:@"DataStore"];
+        
+        [instance autorelease];
 	}
 	
 	return instance;
@@ -73,8 +75,6 @@ static NSMutableArray *sqlFunctions = nil;
 	[[NSNotificationCenter defaultCenter] removeObserver:instance];
 	
 	[threadData removeObjectForKey:@"DataStore"];
-	
-	[instance release];
 }
 
 + (void) setDatabase:(NSString *)db
