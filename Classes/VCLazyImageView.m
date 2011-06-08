@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2009-2010 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -36,6 +36,7 @@
 @implementation VCLazyImageView
 
 @synthesize delegate = _delegate;
+@synthesize useCaching = _useCaching;
 
 - (id)initWithFrame:(CGRect)frame 
 {
@@ -54,6 +55,8 @@
 
 		_spinnerView.hidden = NO;
 		_imageView.hidden = YES;
+        
+        _useCaching = YES;
 
 		[self addSubview:_spinnerView];
 		[self addSubview:_imageView];
@@ -86,8 +89,10 @@
 	[_urlConnection release];
 	_urlConnection = nil;
 	
+    [_url release];
 	_url = [url copy];
-	
+
+	[_backupImageName release];
 	_backupImageName = [backupImageName copy];
 	
 	if (!url) {
@@ -95,7 +100,7 @@
 		return;
 	}
 	
-	UIImage *image = [[VCCache sharedInstance] getObject:url];
+	UIImage *image = _useCaching ? [[VCCache sharedInstance] getObject:url] : nil;
 	
 	if (image)
 	{
@@ -108,9 +113,15 @@
 	
 	[_spinnerView startAnimating];
 	
+    [_receivedData release];
 	_receivedData = [[NSMutableData alloc] init];
 	
-	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30.0];
+    NSURLRequestCachePolicy cachePolicy = NSURLRequestReloadIgnoringCacheData;
+    
+    if (_useCaching)
+        cachePolicy = NSURLRequestReturnCacheDataElseLoad;
+    
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url] cachePolicy:cachePolicy timeoutInterval:30.0];
 	
 	_urlConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
 	
@@ -167,7 +178,7 @@
 {
 	UIImage *image = [UIImage imageWithData:_receivedData];
 
-	[self showImage:(image ? image : [UIImage imageNamed:_backupImageName])];
+	[self showImage:image];
 
 	[[VCCache sharedInstance] setObject:image forKey:_url];
 	
