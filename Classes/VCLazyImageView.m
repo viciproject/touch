@@ -167,7 +167,7 @@
 {
 	UIImage *image = [UIImage imageWithData:_receivedData];
 
-	[self showImage:image];
+	[self showImage:(image ? image : [UIImage imageNamed:_backupImageName])];
 
 	[[VCCache sharedInstance] setObject:image forKey:_url];
 	
