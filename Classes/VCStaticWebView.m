@@ -81,7 +81,7 @@
 	[_webView loadHTMLString:html baseURL:nil];
 }
 
-- (void)dealloc 
+- (void) dealloc 
 {
 	_webView.delegate = nil;
 	

@@ -26,8 +26,8 @@
 
 @interface VCLazyScrollView()
 
-- (BOOL) isSubViewVisible:(int) index;
-- (UIView *) buildSubView:(int) index;
+- (BOOL) isSubViewVisible:(int)index;
+- (UIView *) buildSubView:(int)index;
 - (void) updateVisibleViews;
 - (int) calculateCurrentIndex;
 
@@ -56,14 +56,14 @@
 	return _lazyScrollDelegate;
 }
 
-- (void) setDelegate:(id <VCLazyScrollViewDelegate>)delegate 
+- (void) setDelegate:(id<VCLazyScrollViewDelegate>)delegate 
 {
 	//super.delegate = delegate;
 	
 	_lazyScrollDelegate = delegate;
 }
 
-- (void) setCurrentIndex:(int) index 
+- (void) setCurrentIndex:(int)index 
 {
 	BOOL changed = NO;
 	
@@ -81,7 +81,8 @@
 	}
 }
 
-- (void) setCurrentIndex:(int)index animated:(BOOL) animated {
+- (void) setCurrentIndex:(int)index animated:(BOOL)animated 
+{
 	[self setContentOffset:CGPointMake(index * self.bounds.size.width, 0) animated:animated];
 	
 	if (!animated)
@@ -95,13 +96,15 @@
 	return (int) (index + 0.5);
 }
 
-- (void) scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+- (void) scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView 
+{
 	int currentItem = [self calculateCurrentIndex];
 	
 	[self setCurrentIndex:currentItem];
 }
 
-- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView 
+{
 	int currentItem = [self calculateCurrentIndex];
 	
 	[self setCurrentIndex:currentItem];
@@ -189,7 +192,7 @@
 	self.contentOffset = CGPointMake(_currentIndex * size.width, 0);
 }
 
-- (UIView *) buildSubView:(int) index 
+- (UIView *) buildSubView:(int)index 
 {
 	CGSize size = self.bounds.size;
 	
@@ -212,7 +215,7 @@
 	return view;
 }
 			 
-- (BOOL) isSubViewVisible:(int) index 
+- (BOOL) isSubViewVisible:(int)index 
 {
 	for (UIView *view in _visibleViews) 
 		if (view.tag == index)
@@ -221,7 +224,7 @@
 	return NO;
 }
 
-- (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event 
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event 
 {
 	if (!self.dragging) 
 		[self.nextResponder touchesEnded: touches withEvent:event]; 
@@ -229,7 +232,7 @@
 	[super touchesEnded: touches withEvent: event];
 }
 
-- (void)dealloc 
+- (void) dealloc 
 {
 	[_visibleViews release];
 	[_recycledViews release];

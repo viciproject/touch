@@ -40,7 +40,7 @@
 
 - (id)initWithFrame:(CGRect)frame 
 {
-	if (self = [super initWithFrame:frame]) 
+	if ((self = [super initWithFrame:frame])) 
 	{
 		CGFloat x = self.bounds.size.width / 2 - kActivityIndicatorWidth / 2;
 		CGFloat y = self.bounds.size.height / 2 - kActivityIndicatorWidth / 2;
@@ -151,7 +151,7 @@
 	return _imageView.image;
 }
 
-- (void)dealloc 
+- (void) dealloc 
 {
 	[_spinnerView release];
 	[_imageView release];
@@ -165,16 +165,16 @@
 
 #pragma mark NSURLConnectionDelegate
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
+- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
 {
 }
 
-- (void)connection:(NSURLConnection *)theConnection didReceiveData:(NSData *)data 
+- (void) connection:(NSURLConnection *)theConnection didReceiveData:(NSData *)data 
 {
     [_receivedData appendData:data];
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection 
+- (void) connectionDidFinishLoading:(NSURLConnection *)connection 
 {
 	UIImage *image = [UIImage imageWithData:_receivedData];
 
@@ -190,7 +190,7 @@
 	_urlConnection = nil;
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
 {
 	[self showImage:[UIImage imageNamed:_backupImageName]];
 	

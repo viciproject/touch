@@ -26,7 +26,7 @@
 
 @implementation VCDateHelper
 
-+ (NSString *) stringFromDate:(NSDate *) date formatString:(NSString *) formatString 
++ (NSString *) stringFromDate:(NSDate *)date formatString:(NSString *)formatString 
 {
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	
@@ -39,12 +39,12 @@
 	return s;
 }
 
-+ (NSString *) stringFromDate:(NSDate *) date formatter:(NSDateFormatter *) dateFormatter
++ (NSString *) stringFromDate:(NSDate *)date formatter:(NSDateFormatter *)dateFormatter
 {
 	return [dateFormatter stringFromDate:date];
 }
 
-+ (NSDate *) dateFromString:(NSString *) date formatString:(NSString *) formatString 
++ (NSDate *) dateFromString:(NSString *)date formatString:(NSString *)formatString 
 {
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	
@@ -57,12 +57,13 @@
 	return returnValue;
 }
 
-+ (NSDate *) dateFromString:(NSString *) date formatter:(NSDateFormatter *) dateFormatter
++ (NSDate *) dateFromString:(NSString *)date formatter:(NSDateFormatter *)dateFormatter
 {
 	return [dateFormatter dateFromString:date];
 }
 
-+ (NSDate *) stripTime:(NSDate *) date {
++ (NSDate *) stripTime:(NSDate *)date 
+{
 	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	
 	NSDateComponents *components = [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:date];
@@ -74,28 +75,31 @@
 	return date;
 }
 
-+ (NSDate *) addDays:(NSDate *)date days:(int) days {
++ (NSDate *) addDays:(NSDate *)date days:(int)days 
+{
 	return [[[NSDate alloc] initWithTimeInterval:days * 24 * 60 * 60 sinceDate:date] autorelease];
 }
 
-+ (NSDate *) addHours:(NSDate *)date hours:(int) hours {
++ (NSDate *) addHours:(NSDate *)date hours:(int)hours 
+{
 	return [[[NSDate alloc] initWithTimeInterval:hours * 60 * 60 sinceDate:date] autorelease];
 }
 
-+ (NSDate *) addMinutes:(NSDate *)date minutes:(int) minutes {
++ (NSDate *) addMinutes:(NSDate *)date minutes:(int)minutes 
+{
 	return [[[NSDate alloc] initWithTimeInterval:minutes * 60 sinceDate:date] autorelease];
 }
 
-+ (NSDate *) addSeconds:(NSDate *)date seconds:(float) seconds {
++ (NSDate *) addSeconds:(NSDate *)date seconds:(float)seconds 
+{
 	return [[[NSDate alloc] initWithTimeInterval:seconds sinceDate:date] autorelease];
 }
-
 
 @end
 
 @implementation NSString(DateHelper)
 
-- (NSDate *) dateFromStringWithFormat:(NSString *) formatString 
+- (NSDate *) dateFromStringWithFormat:(NSString *)formatString 
 {
 	return [VCDateHelper dateFromString:self formatString:formatString];
 }
@@ -109,7 +113,7 @@
 
 @implementation NSDate(DateHelper)
 
-- (NSString *) stringFromDateWithFormat:(NSString *) formatString
+- (NSString *) stringFromDateWithFormat:(NSString *)formatString
 {
 	return [VCDateHelper stringFromDate:self formatString:formatString];
 }
@@ -119,25 +123,29 @@
 	return [VCDateHelper stringFromDate:self formatter:dateFormatter];
 }
 
-- (NSDate *) stripTime {
+- (NSDate *) stripTime 
+{
 	return [VCDateHelper stripTime:self];
 }
 
-- (NSDate *) addDays:(int) days {
+- (NSDate *) addDays:(int)days 
+{
 	return [VCDateHelper addDays:self days:days];
 }
 
-- (NSDate *) addMinutes:(int) minutes {
+- (NSDate *) addMinutes:(int)minutes 
+{
 	return [VCDateHelper addMinutes:self minutes:minutes];
 }
 
-- (NSDate *) addSeconds:(float) seconds {
+- (NSDate *) addSeconds:(float)seconds 
+{
 	return [VCDateHelper addSeconds:self seconds:seconds];
 }
 
-
-- (NSDate *) addHours:(double) h {
-	return [VCDateHelper addHours:self hours:h];
+- (NSDate *) addHours:(double)hours 
+{
+	return [VCDateHelper addHours:self hours:hours];
 }
 
 @end

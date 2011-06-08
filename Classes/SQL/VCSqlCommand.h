@@ -30,24 +30,24 @@
 
 @interface VCSqlCommand : NSObject 
 {
-	NSString * _sql;
-	VCSqlParameterList * _sqlParameters;
+	NSString *_sql;
+	VCSqlParameterList *_sqlParameters;
 }
 
 @property (readwrite,nonatomic,retain) NSString * sql;
 @property (readonly,nonatomic,retain) VCSqlParameterList *sqlParameters;
 
-+ (id) sqlCommandFromSql:(NSString *) sql;
-+ (id) sqlCommandFromSql:(NSString *) sql parameters:(VCSqlParameterList *)params;
++ (id) sqlCommandFromSql:(NSString *)sql;
++ (id) sqlCommandFromSql:(NSString *)sql parameters:(VCSqlParameterList *)params;
 
-+ (id) sqlCommandFromTable:(NSString *) tableName;
-+ (id) sqlCommandFromTable:(NSString *) tableName sortBy:(NSString *) sortBy;
-+ (id) sqlCommandFromTable:(NSString *) tableName filter:(NSString *) filter;
-+ (id) sqlCommandFromTable:(NSString *) tableName filter:(NSString *) filter sortBy:(NSString *)sortBy;
-+ (id) sqlCommandFromTable:(NSString *) tableName filter:(NSString *) filter parameters:(VCSqlParameterList *)params;
-+ (id) sqlCommandFromTable:(NSString *) tableName filter:(NSString *) filter parameters:(VCSqlParameterList *)params sortBy:(NSString *) sortBy;
++ (id) sqlCommandFromTable:(NSString *)tableName;
++ (id) sqlCommandFromTable:(NSString *)tableName sortBy:(NSString *)sortBy;
++ (id) sqlCommandFromTable:(NSString *)tableName filter:(NSString *)filter;
++ (id) sqlCommandFromTable:(NSString *)tableName filter:(NSString *)filter sortBy:(NSString *)sortBy;
++ (id) sqlCommandFromTable:(NSString *)tableName filter:(NSString *)filter parameters:(VCSqlParameterList *)params;
++ (id) sqlCommandFromTable:(NSString *)tableName filter:(NSString *)filter parameters:(VCSqlParameterList *)params sortBy:(NSString *)sortBy;
 
 - (void) applyParameters:(VCSqlParameterList *)params;
-- (void) addParameter:(id) value withName:(NSString *)name;
+- (void) addParameter:(id)value withName:(NSString *)name;
 
 @end

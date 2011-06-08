@@ -28,15 +28,15 @@
 
 @protocol VCStaticWebViewDelegate
 
-- (void) staticWebView:(VCStaticWebView *)view sizeChanged:(CGSize) size;
+- (void) staticWebView:(VCStaticWebView *)view sizeChanged:(CGSize)size;
 
 @end
 
 
 @interface VCStaticWebView : UIView<UIWebViewDelegate> 
 {
-	UIWebView * _webView;
-	UIView * _maskView;
+	UIWebView *_webView;
+	UIView *_maskView;
 	id<VCStaticWebViewDelegate> _delegate;
 }
 
