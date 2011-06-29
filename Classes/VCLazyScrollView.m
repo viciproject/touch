@@ -74,10 +74,10 @@
 	
 	if (changed)
 	{
+        [self updateVisibleViews];
+        
 		if ([self.delegate respondsToSelector:@selector(lazyScrollView:currentIndexChanged:)])
 			[self.delegate lazyScrollView:self currentIndexChanged:index];
-	
-		[self updateVisibleViews];
 	}
 }
 
