@@ -28,7 +28,7 @@
 
 - (BOOL) isSubViewVisible:(int)index;
 - (UIView *) buildSubView:(int)index;
-- (void) updateVisibleViews;
+- (void) updateVisibleViews:(BOOL)removeAllVisible;
 - (int) calculateCurrentIndex;
 
 @end
@@ -74,7 +74,7 @@
 	
 	if (changed)
 	{
-        [self updateVisibleViews];
+        [self updateVisibleViews:NO];
         
 		if ([self.delegate respondsToSelector:@selector(lazyScrollView:currentIndexChanged:)])
 			[self.delegate lazyScrollView:self currentIndexChanged:index];
@@ -118,7 +118,7 @@
 }
  */
 
-- (void) updateVisibleViews 
+- (void) updateVisibleViews:(BOOL)removeAllVisible 
 {
 	int numItems = [self.delegate lazyScrollViewItemCount:self];
 	
@@ -133,7 +133,7 @@
 	
 	for (UIView *view in _visibleViews) 
 	{
-		if (view.tag < first || view.tag > last) 
+		if (removeAllVisible || view.tag < first || view.tag > last) 
 		{
 			if ([self.delegate respondsToSelector:@selector(lazyScrollView:subViewWillRecycle:forIndex:)])
 				[self.delegate lazyScrollView:self subViewWillRecycle:view forIndex:view.tag];
@@ -169,7 +169,7 @@
 
 - (void) reloadData 
 {
-	[self updateVisibleViews];
+	[self updateVisibleViews:YES];
 	
 	[self forceLayout];
 }
