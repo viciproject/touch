@@ -84,6 +84,10 @@
 		ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0B21348C18D005E7FCF /* VCUtil.h */; };
 		ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
 		ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
+		B8EAA6291421E56700668476 /* VCOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B8EAA6271421E56700668476 /* VCOrderedDictionary.h */; };
+		B8EAA62A1421E56700668476 /* VCOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B8EAA6271421E56700668476 /* VCOrderedDictionary.h */; };
+		B8EAA62B1421E56700668476 /* VCOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAA6281421E56700668476 /* VCOrderedDictionary.m */; };
+		B8EAA62C1421E56700668476 /* VCOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAA6281421E56700668476 /* VCOrderedDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +131,8 @@
 		ACB4F0AD1348C174005E7FCF /* VCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCCache.m; path = Classes/VCCache.m; sourceTree = "<group>"; };
 		ACB4F0B21348C18D005E7FCF /* VCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCUtil.h; path = Classes/VCUtil.h; sourceTree = "<group>"; };
 		ACB4F0B31348C18D005E7FCF /* VCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCUtil.m; path = Classes/VCUtil.m; sourceTree = "<group>"; };
+		B8EAA6271421E56700668476 /* VCOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCOrderedDictionary.h; path = Classes/VCOrderedDictionary.h; sourceTree = "<group>"; };
+		B8EAA6281421E56700668476 /* VCOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCOrderedDictionary.m; path = Classes/VCOrderedDictionary.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libViciTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViciTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -192,6 +198,8 @@
 				ACB4F0AD1348C174005E7FCF /* VCCache.m */,
 				37A5A176122408A00078A4F3 /* VCDateHelper.h */,
 				37A5A177122408A00078A4F3 /* VCDateHelper.m */,
+				B8EAA6271421E56700668476 /* VCOrderedDictionary.h */,
+				B8EAA6281421E56700668476 /* VCOrderedDictionary.m */,
 				ACB4F0B21348C18D005E7FCF /* VCUtil.h */,
 				ACB4F0B31348C18D005E7FCF /* VCUtil.m */,
 			);
@@ -298,6 +306,7 @@
 				ACB4F0A81348C140005E7FCF /* VCSqlFunction.h in Headers */,
 				ACB4F0AF1348C175005E7FCF /* VCCache.h in Headers */,
 				ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */,
+				B8EAA62A1421E56700668476 /* VCOrderedDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +333,7 @@
 				ACB4F0A71348C140005E7FCF /* VCSqlFunction.h in Headers */,
 				ACB4F0AE1348C175005E7FCF /* VCCache.h in Headers */,
 				ACB4F0B41348C18D005E7FCF /* VCUtil.h in Headers */,
+				B8EAA6291421E56700668476 /* VCOrderedDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +388,10 @@
 				Japanese,
 				French,
 				German,
+				en,
+				fr,
+				nl,
+				pt,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* ViciTouch */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -413,6 +427,7 @@
 				ACB4F0AA1348C140005E7FCF /* VCSqlFunction.m in Sources */,
 				ACB4F0B11348C175005E7FCF /* VCCache.m in Sources */,
 				ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */,
+				B8EAA62C1421E56700668476 /* VCOrderedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +453,7 @@
 				ACB4F0A91348C140005E7FCF /* VCSqlFunction.m in Sources */,
 				ACB4F0B01348C175005E7FCF /* VCCache.m in Sources */,
 				ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */,
+				B8EAA62B1421E56700668476 /* VCOrderedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +467,12 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/ViciTouch.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Truvo/gp-iphone/Classes/External/JunaioPlugin/externalFrameworks\"",
+					"\"$(SRCROOT)/../../Truvo/gp-iphone/Classes/External/JunaioPlugin\"",
+					"\"$(SRCROOT)/../../Truvo/gp-iphone/Classes/External\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -469,6 +491,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/ViciTouch.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Truvo/gp-iphone/Classes/External/JunaioPlugin/externalFrameworks\"",
+					"\"$(SRCROOT)/../../Truvo/gp-iphone/Classes/External/JunaioPlugin\"",
+					"\"$(SRCROOT)/../../Truvo/gp-iphone/Classes/External\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
