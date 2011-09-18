@@ -32,7 +32,6 @@
 + (VCDataStore *) instance;
 - (int) execCommand:(VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int))callback data:(void *)data;
 - (int) execCommand:(VCSqlCommand *)cmd;
-- (int) lastRowId;
 - (sqlite3 *) openDb;
 
 @end
