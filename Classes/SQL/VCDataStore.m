@@ -33,6 +33,7 @@
 - (int) execCommand:(VCSqlCommand *)cmd callback:(void (*)(int,void *,const char *,const void *,int))callback data:(void *)data;
 - (int) execCommand:(VCSqlCommand *)cmd;
 - (sqlite3 *) openDb;
+- (int) lastRowId;
 
 @end
 

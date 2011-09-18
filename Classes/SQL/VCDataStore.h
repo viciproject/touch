@@ -53,7 +53,7 @@
 + (int) getScalar:(VCSqlCommand *)cmd;
 + (NSString *) getScalarString:(VCSqlCommand *)cmd;
 
-- (int) lastRowId;
++ (int) lastRowId;
 
 /*
 - (NSDictionary *) readRecord:(SqlCommand *)cmd;
