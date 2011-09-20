@@ -84,6 +84,10 @@
 		ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0B21348C18D005E7FCF /* VCUtil.h */; };
 		ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
 		ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
+		B8A507921428CB8600D3CE39 /* VCOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B8A507901428CB8600D3CE39 /* VCOrderedDictionary.h */; };
+		B8A507931428CB8600D3CE39 /* VCOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B8A507901428CB8600D3CE39 /* VCOrderedDictionary.h */; };
+		B8A507941428CB8600D3CE39 /* VCOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A507911428CB8600D3CE39 /* VCOrderedDictionary.m */; };
+		B8A507951428CB8600D3CE39 /* VCOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A507911428CB8600D3CE39 /* VCOrderedDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +131,8 @@
 		ACB4F0AD1348C174005E7FCF /* VCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCCache.m; path = Classes/VCCache.m; sourceTree = "<group>"; };
 		ACB4F0B21348C18D005E7FCF /* VCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCUtil.h; path = Classes/VCUtil.h; sourceTree = "<group>"; };
 		ACB4F0B31348C18D005E7FCF /* VCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCUtil.m; path = Classes/VCUtil.m; sourceTree = "<group>"; };
+		B8A507901428CB8600D3CE39 /* VCOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCOrderedDictionary.h; path = "../../Truvo/gp-iphone/Classes/External/Toolkit/Toolkit/Vici Touch/Classes/VCOrderedDictionary.h"; sourceTree = "<group>"; };
+		B8A507911428CB8600D3CE39 /* VCOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCOrderedDictionary.m; path = "../../Truvo/gp-iphone/Classes/External/Toolkit/Toolkit/Vici Touch/Classes/VCOrderedDictionary.m"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libViciTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViciTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -192,6 +198,8 @@
 				ACB4F0AD1348C174005E7FCF /* VCCache.m */,
 				37A5A176122408A00078A4F3 /* VCDateHelper.h */,
 				37A5A177122408A00078A4F3 /* VCDateHelper.m */,
+				B8A507901428CB8600D3CE39 /* VCOrderedDictionary.h */,
+				B8A507911428CB8600D3CE39 /* VCOrderedDictionary.m */,
 				ACB4F0B21348C18D005E7FCF /* VCUtil.h */,
 				ACB4F0B31348C18D005E7FCF /* VCUtil.m */,
 			);
@@ -298,6 +306,7 @@
 				ACB4F0A81348C140005E7FCF /* VCSqlFunction.h in Headers */,
 				ACB4F0AF1348C175005E7FCF /* VCCache.h in Headers */,
 				ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */,
+				B8A507931428CB8600D3CE39 /* VCOrderedDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +333,7 @@
 				ACB4F0A71348C140005E7FCF /* VCSqlFunction.h in Headers */,
 				ACB4F0AE1348C175005E7FCF /* VCCache.h in Headers */,
 				ACB4F0B41348C18D005E7FCF /* VCUtil.h in Headers */,
+				B8A507921428CB8600D3CE39 /* VCOrderedDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +423,7 @@
 				ACB4F0AA1348C140005E7FCF /* VCSqlFunction.m in Sources */,
 				ACB4F0B11348C175005E7FCF /* VCCache.m in Sources */,
 				ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */,
+				B8A507951428CB8600D3CE39 /* VCOrderedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +449,7 @@
 				ACB4F0A91348C140005E7FCF /* VCSqlFunction.m in Sources */,
 				ACB4F0B01348C175005E7FCF /* VCCache.m in Sources */,
 				ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */,
+				B8A507941428CB8600D3CE39 /* VCOrderedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
