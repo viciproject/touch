@@ -38,14 +38,14 @@
 @synthesize currentIndex = _currentIndex;
 @synthesize visibleViews = _visibleViews;
 
-- (id)initWithFrame:(CGRect)frame 
+- (id) initWithFrame:(CGRect)frame 
 {
     if ((self = [super initWithFrame:frame])) 
 	{
         _visibleViews = [[NSMutableSet alloc] init];
 		_recycledViews = [[NSMutableSet alloc] init];
 		
-		super.delegate = self;
+		[super setDelegate:self];
     }
 	
     return self;
@@ -58,8 +58,6 @@
 
 - (void) setDelegate:(id<VCLazyScrollViewDelegate>)delegate 
 {
-	//super.delegate = delegate;
-	
 	_lazyScrollDelegate = delegate;
 }
 
