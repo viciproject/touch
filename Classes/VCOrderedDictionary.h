@@ -32,10 +32,6 @@
 }
 
 
-@property (nonatomic, retain) NSMutableArray *keys;
-@property (nonatomic, retain) NSMutableDictionary *values;
-
-
 - (void) addObject:(id)object forKey:(id)key;
 
 - (NSUInteger) count;

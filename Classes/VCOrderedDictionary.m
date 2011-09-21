@@ -25,6 +25,14 @@
 #import "VCOrderedDictionary.h"
 
 
+@interface VCOrderedDictionary ()
+
+@property (nonatomic, retain) NSMutableArray *keys;
+@property (nonatomic, retain) NSMutableDictionary *values;
+
+@end
+
+
 @implementation VCOrderedDictionary
 
 
@@ -97,11 +105,7 @@
         [objects addObject:[_values objectForKey:key]];
     }
     
-    NSArray *returnObjects = [objects copy];
-    
-    [objects release];
-    
-    return [returnObjects autorelease];
+    return [objects autorelease];
 }
 
 - (id) objectAtIndex:(NSUInteger)index
