@@ -114,6 +114,8 @@ void DataObject_callback(int mode, void *obj, const char *fieldName, const void 
 + (id) readSingle 
 {
 	NSArray *array = [self readAll];
+    
+    if ([array count] == 0) return nil;
 	
 	return [array objectAtIndex:0];
 }
