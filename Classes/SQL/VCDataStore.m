@@ -130,9 +130,16 @@ static NSMutableArray *sqlFunctions = nil;
 			
 			NSString *sqlString = [NSString stringWithContentsOfFile:fn encoding:NSUTF8StringEncoding error:NULL];
 			
-			char *errMsg;
+			char *errMsg = NULL;
 			
 			sqlite3_exec(db, [sqlString UTF8String],NULL,NULL,&errMsg);
+            
+            if (errMsg)
+            {
+                NSLog(@"Error running create db script: %s", errMsg);
+                
+                sqlite3_free(errMsg);
+            }
 		}
 	} 
 	else 
