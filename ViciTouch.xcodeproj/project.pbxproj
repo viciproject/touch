@@ -84,6 +84,10 @@
 		ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0B21348C18D005E7FCF /* VCUtil.h */; };
 		ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
 		ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
+		ACE2545C142E6DEA007F34FF /* NSArray+FirstObject.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE2545A142E6DEA007F34FF /* NSArray+FirstObject.h */; };
+		ACE2545D142E6DEA007F34FF /* NSArray+FirstObject.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE2545A142E6DEA007F34FF /* NSArray+FirstObject.h */; };
+		ACE2545E142E6DEA007F34FF /* NSArray+FirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE2545B142E6DEA007F34FF /* NSArray+FirstObject.m */; };
+		ACE2545F142E6DEA007F34FF /* NSArray+FirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE2545B142E6DEA007F34FF /* NSArray+FirstObject.m */; };
 		B8A507B31428DB1D00D3CE39 /* VCOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B8A507B11428DB1D00D3CE39 /* VCOrderedDictionary.h */; };
 		B8A507B41428DB1D00D3CE39 /* VCOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B8A507B11428DB1D00D3CE39 /* VCOrderedDictionary.h */; };
 		B8A507B51428DB1D00D3CE39 /* VCOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A507B21428DB1D00D3CE39 /* VCOrderedDictionary.m */; };
@@ -131,6 +135,8 @@
 		ACB4F0AD1348C174005E7FCF /* VCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCCache.m; path = Classes/VCCache.m; sourceTree = "<group>"; };
 		ACB4F0B21348C18D005E7FCF /* VCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCUtil.h; path = Classes/VCUtil.h; sourceTree = "<group>"; };
 		ACB4F0B31348C18D005E7FCF /* VCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCUtil.m; path = Classes/VCUtil.m; sourceTree = "<group>"; };
+		ACE2545A142E6DEA007F34FF /* NSArray+FirstObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+FirstObject.h"; path = "Classes/NSArray+FirstObject.h"; sourceTree = "<group>"; };
+		ACE2545B142E6DEA007F34FF /* NSArray+FirstObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+FirstObject.m"; path = "Classes/NSArray+FirstObject.m"; sourceTree = "<group>"; };
 		B8A507B11428DB1D00D3CE39 /* VCOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCOrderedDictionary.h; path = Classes/VCOrderedDictionary.h; sourceTree = "<group>"; };
 		B8A507B21428DB1D00D3CE39 /* VCOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCOrderedDictionary.m; path = Classes/VCOrderedDictionary.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libViciTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViciTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +278,8 @@
 		AC87F668133D40F00029B9C0 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				ACE2545A142E6DEA007F34FF /* NSArray+FirstObject.h */,
+				ACE2545B142E6DEA007F34FF /* NSArray+FirstObject.m */,
 				AC87F676133D47260029B9C0 /* UIView+Resizing.h */,
 				AC87F677133D47260029B9C0 /* UIView+Resizing.m */,
 				AC87F683133D48D20029B9C0 /* UIView+Positioning.h */,
@@ -307,6 +315,7 @@
 				ACB4F0AF1348C175005E7FCF /* VCCache.h in Headers */,
 				ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */,
 				B8A507B41428DB1D00D3CE39 /* VCOrderedDictionary.h in Headers */,
+				ACE2545D142E6DEA007F34FF /* NSArray+FirstObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +343,7 @@
 				ACB4F0AE1348C175005E7FCF /* VCCache.h in Headers */,
 				ACB4F0B41348C18D005E7FCF /* VCUtil.h in Headers */,
 				B8A507B31428DB1D00D3CE39 /* VCOrderedDictionary.h in Headers */,
+				ACE2545C142E6DEA007F34FF /* NSArray+FirstObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +434,7 @@
 				ACB4F0B11348C175005E7FCF /* VCCache.m in Sources */,
 				ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */,
 				B8A507B61428DB1D00D3CE39 /* VCOrderedDictionary.m in Sources */,
+				ACE2545F142E6DEA007F34FF /* NSArray+FirstObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +461,7 @@
 				ACB4F0B01348C175005E7FCF /* VCCache.m in Sources */,
 				ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */,
 				B8A507B51428DB1D00D3CE39 /* VCOrderedDictionary.m in Sources */,
+				ACE2545E142E6DEA007F34FF /* NSArray+FirstObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
