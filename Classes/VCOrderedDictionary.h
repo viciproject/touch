@@ -40,6 +40,10 @@
 
 - (void) insertObject:(id)object forKey:(id)key atIndex:(NSUInteger)index;
 
+- (NSUInteger) indexForKey:(id)key;
+
+- (id) keyForIndex:(NSUInteger)index;
+
 - (id) objectAtIndex:(NSUInteger)index;
 - (id) objectForKey:(id)key;
 
