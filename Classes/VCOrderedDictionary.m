@@ -82,6 +82,18 @@
 {
     return [_keys count];
 }
+- (NSArray *) getObjects
+{
+    NSMutableArray *objects = [[NSMutableArray alloc] initWithCapacity:[_keys count]];
+    
+    for (id key in _keys)
+    {
+        [objects addObject:[_values objectForKey:key]];
+    }
+    
+    return [objects autorelease];
+}
+
 
 - (void) insertObject:(id)object forKey:(id)key atIndex:(NSUInteger)index
 {
@@ -96,16 +108,14 @@
     [_values setObject:object forKey:key];
 }
 
-- (NSArray *) getObjects
+- (NSUInteger) indexForKey:(id)key
 {
-    NSMutableArray *objects = [[NSMutableArray alloc] initWithCapacity:[_keys count]];
-    
-    for (id key in _keys)
-    {
-        [objects addObject:[_values objectForKey:key]];
-    }
-    
-    return [objects autorelease];
+    return [_keys indexOfObject:key];
+}
+
+- (id) keyForIndex:(NSUInteger)index
+{
+    return [_keys objectAtIndex:index];
 }
 
 - (id) objectAtIndex:(NSUInteger)index
