@@ -178,7 +178,7 @@ static NSMutableArray *sqlFunctions = nil;
 	
 	if (sqlite_code != SQLITE_OK) 
 	{
-		NSLog(@"Error %d preparing SQLite command %@",sqlite_code,cmd.sql,nil);
+		NSLog(@"Error %d preparing SQLite command %@",sqlite_code,cmd.sql);
 		return -1;
 	}
 		
@@ -238,7 +238,7 @@ static NSMutableArray *sqlFunctions = nil;
 		{
 			if (sqlite_code != SQLITE_DONE) 
 			{
-				NSLog(@"Error %d executing sqlite3_step [%@]",sqlite_code,cmd.sql,nil);
+				NSLog(@"Error %d executing sqlite3_step [%@]",sqlite_code,cmd.sql);
 			}
 			
 			break;
