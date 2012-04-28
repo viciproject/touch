@@ -42,6 +42,7 @@
 + (BOOL) fileExists:(NSString *)fileName;
 + (BOOL) fileExistsInDocuments:(NSString *)fileName;
 + (BOOL) fileExistsInMainBundle:(NSString *)fileName;
++ (BOOL) setNoBackupFlag:(NSString *)path;
 
 + (void) startNetworkActivity;
 + (void) endNetworkActivity;
