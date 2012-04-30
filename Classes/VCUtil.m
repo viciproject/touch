@@ -25,7 +25,11 @@
 
 #import "VCUtil.h"
 #include <sys/xattr.h>
-
+#include <CommonCrypto/CommonDigest.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <net/if_dl.h>
+#include <ifaddrs.h>
 
 @implementation VCUtil
 
@@ -108,6 +112,76 @@ static int networkActivityCounter = 0;
     int result = setxattr(filePath, attrName, &attrValue, sizeof(attrValue), 0, 0);
 
     return result == 0;
+}
+
++ (NSString *) uniqueId
+{
+    return [self toHex:[self sha1:[self macAddress]]];
+}
+
++ (NSString *) uniqueIdWithKey:(NSData *)key
+{
+    NSMutableData *finalKey = [NSData dataWithData:[self macAddress]];
+    
+    [finalKey appendData:key];
+    
+    return [self toHex:[self sha1:finalKey]];
+}
+
++ (NSData *) sha1:(NSData *) data
+{
+    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+    
+    CC_SHA1(data.bytes, data.length, digest);
+    
+    return [NSData dataWithBytes:digest length:CC_SHA1_DIGEST_LENGTH];
+}
+
++ (NSString *) toHex:(NSData *)data
+{
+    int numBytes = [data length];
+    
+    NSMutableString* output = [NSMutableString stringWithCapacity:numBytes * 2];
+    
+    unsigned char *ptr = (unsigned char *)[data bytes];
+    
+    for(int i = 0; i < numBytes; i++)
+        [output appendFormat:@"%02x", *ptr++];
+    
+    return output;
+}
+
+#define IFT_ETHER 0x6 
+
++ (NSData *) macAddress
+{    
+    struct ifaddrs *addrs;
+    struct ifaddrs *current;
+    const struct sockaddr_dl *dlAddr;
+    const unsigned char* base;
+    unsigned char macAddr[6] = {0,0,0,0,0,0};
+    
+    if (getifaddrs(&addrs) == 0) 
+    {
+        current = addrs;
+        
+        while (current != 0) 
+        {
+            if ( (current->ifa_addr->sa_family == AF_LINK)
+                && (((const struct sockaddr_dl *) current->ifa_addr)->sdl_type == IFT_ETHER) && strcmp("en0", current->ifa_name)==0 ) 
+            {
+                dlAddr = (const struct sockaddr_dl *) current->ifa_addr;
+                base = (const unsigned char*) &dlAddr->sdl_data[dlAddr->sdl_nlen];
+
+                memcpy(macAddr,base, 6);
+            }
+            current = current->ifa_next;
+        }
+        
+        freeifaddrs(addrs);
+    }    
+    
+    return [NSData dataWithBytes:macAddr length:6];
 }
 
 @end

@@ -49,4 +49,7 @@
 
 + (void) showAlertWithTitle:(NSString *)title andMessage:(NSString *)message;
 
++ (NSString *) uniqueId;
++ (NSString *) uniqueIdWithKey:(NSData *)key;
+
 @end
