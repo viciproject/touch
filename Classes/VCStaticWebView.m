@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -24,16 +24,24 @@
 
 #import "VCStaticWebView.h"
 
+@interface VCStaticWebView()
+{
+	UIWebView *_webView;
+	UIView *_maskView;
+}
+
+@end
+
+
 @implementation VCStaticWebView
 
-@synthesize delegate = _delegate;
-
-- (id)initWithFrame:(CGRect)frame 
+- (id)initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame])) 
 	{
         _webView = [[UIWebView alloc] initWithFrame:self.bounds];
 		_webView.delegate = self;
+        _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 		_webView.userInteractionEnabled = NO;
 		
 		[self addSubview:_webView];
@@ -48,11 +56,46 @@
     return self;
 }
 
-- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error 
+- (void) setTransparent:(BOOL)transparent
+{
+    _transparent = transparent;
+    
+    if (transparent)
+    {
+        self.backgroundColor = [UIColor clearColor];
+        _webView.backgroundColor = [UIColor clearColor];
+        _webView.opaque = NO;
+    }
+}
+
+- (void) setInteractive:(BOOL)interactive
+{
+    _interactive = interactive;
+    
+    if (interactive)
+    {
+        [_maskView removeFromSuperview];
+        _webView.userInteractionEnabled = YES;
+        
+    }
+}
+
+- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
 }
 
-- (void) webViewDidFinishLoad:(UIWebView *)webView 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    if (navigationType == UIWebViewNavigationTypeLinkClicked)
+    {
+        if (self.onLinkClicked)
+            return self.onLinkClicked(request.URL);
+    }
+    
+    return YES;
+}
+
+- (void) webViewDidFinishLoad:(UIWebView *)webView
 {
 	[_webView sizeToFit];
 
@@ -61,8 +104,12 @@
 	frame.size.height = _webView.frame.size.height;
 	
 	self.frame = frame;
-	
-	[_delegate staticWebView:self sizeChanged:frame.size];
+
+    if (self.onSizeChanged)
+        self.onSizeChanged(frame.size);
+    
+    if (self.onLoadCompleted)
+        self.onLoadCompleted();
 }
 
 - (void) sizeToFit 
@@ -81,14 +128,5 @@
 	[_webView loadHTMLString:html baseURL:nil];
 }
 
-- (void) dealloc 
-{
-	_webView.delegate = nil;
-	
-	[_webView release];
-	[_maskView release];
-	
-    [super dealloc];
-}
 
 @end

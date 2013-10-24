@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -52,7 +52,7 @@
 - (NSString *) stringFromDateWithFormatter:(NSDateFormatter *)dateFormatter;
 - (NSDate *) stripTime;
 - (NSDate *) addDays:(int)days;
-- (NSDate *) addHours:(double)hours; 
+- (NSDate *) addHours:(int)hours;
 - (NSDate *) addMinutes:(int)minutes;
 - (NSDate *) addSeconds:(float)seconds;
 

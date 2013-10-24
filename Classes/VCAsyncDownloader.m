@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -32,18 +32,13 @@
 
 @implementation VCAsyncDownloader
 
-@synthesize delegate = _delegate;
 @synthesize data = _data;
-@synthesize userData = _userData;
-@synthesize useMainThread = _onMainThread;
 
 - (id) initWithUrl:(NSString *)url 
 {
 	if ((self = [super init])) 
 	{
 		_url = [[NSURL alloc] initWithString:url];
-		
-		[self retain];
 	}
 	
 	return self;
@@ -53,7 +48,7 @@
 {
 	VCAsyncDownloader *instance = [[VCAsyncDownloader alloc] initWithUrl:url];
 	
-	return [instance autorelease];
+	return instance;
 }
 
 + (void) start:(NSString *)url delegate:(id)delegate 
@@ -80,8 +75,6 @@
 	downloader.useMainThread = onMainThread;
 	
 	[downloader start];
-	
-	[downloader release];
 }
 
 - (void) start:(id)userData 
@@ -93,7 +86,7 @@
 
 - (void) start 
 {
-	if (_onMainThread && ![NSThread isMainThread]) 
+	if (self.useMainThread && ![NSThread isMainThread])
 	{
 		[self performSelectorOnMainThread:@selector(startInternal) withObject:nil waitUntilDone:NO];
 	}
@@ -105,9 +98,6 @@
 
 - (void) startInternal 
 {
-	[_data release];
-	[_connection release];
-	
 	_data = [[NSMutableData alloc] init];
 	
     _connection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:_url] delegate:self];
@@ -116,8 +106,6 @@
 - (void) cancel 
 {
 	[_connection cancel];
-	
-	[self release];
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data 
@@ -129,26 +117,13 @@
 {
 	if ([_delegate respondsToSelector:@selector(asyncDownloadFailed:)])
 		[_delegate asyncDownloadFailed:self];
-	
-	[self release];
 }
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	if ([_delegate respondsToSelector:@selector(asyncDownloadCompleted:)])
 		[_delegate asyncDownloadCompleted:self];
-	
-	[self release];
 }
 
-- (void) dealloc 
-{
-	[_url release];
-	[_data release];
-	[_connection release];
-	[_userData release];
-	
-	[super dealloc];
-}
 
 @end

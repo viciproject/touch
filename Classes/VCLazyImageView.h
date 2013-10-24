@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2009-2010 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -47,15 +47,11 @@
 	NSURLConnection *_urlConnection;
 	
 	NSString *_url;
-    
-    BOOL _useCaching;
-	
-	id<VCLazyImageViewDelegate> _delegate;
 }
 
-@property (nonatomic,assign) id<VCLazyImageViewDelegate> delegate;
-@property (readonly) UIImage *image;
-@property (nonatomic,assign) BOOL useCaching;
+@property (unsafe_unretained) id<VCLazyImageViewDelegate> delegate;
+@property (strong,readonly) UIImage *image;
+@property () BOOL useCaching;
 
 - (void) setImageUrl:(NSString *)url backupImageName:(NSString *)backupImageName;
 

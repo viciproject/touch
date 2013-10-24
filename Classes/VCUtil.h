@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -43,6 +43,12 @@
 + (BOOL) fileExistsInDocuments:(NSString *)fileName;
 + (BOOL) fileExistsInMainBundle:(NSString *)fileName;
 + (BOOL) setNoBackupFlag:(NSString *)path;
++ (BOOL) isPad;
++ (BOOL) isPhone;
++ (BOOL) isTallPhone;
++ (BOOL) isSmallPhone;
++ (BOOL) isLandscape:(UIViewController *)controller;
++ (BOOL) isOS7;
 
 + (void) startNetworkActivity;
 + (void) endNetworkActivity;
@@ -51,5 +57,13 @@
 
 + (NSString *) uniqueId;
 + (NSString *) uniqueIdWithKey:(NSData *)key;
+
++ (void) dispatch:(dispatch_block_t) block;
++ (void) dispatchUI:(dispatch_block_t) block;
++ (void) dispatchUI:(dispatch_block_t) block withDelay:(NSTimeInterval) delay;
+
++ (NSArray *) liftToArray:(id)object;
++ (NSArray *) liftToArrayNotNil:(id)object;
+
 
 @end

@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -24,27 +24,30 @@
 
 #import <Foundation/Foundation.h>
 
-@class VCXmlElement;
+#import "VCAttributedValue.h"
+
+@interface VCXmlElement : VCAttributedValue
+{
+}
+
+- (VCXmlElement *) findElement:(NSString *)name;
+- (NSString *) findValue:(NSString *)name;
+
+- (NSDictionary *) toGraph;
+
+@property (nonatomic,readonly) NSArray *children;
+
+@end
 
 @interface VCXmlParser : NSObject<NSXMLParserDelegate> 
 {
-	void *_parserState;
-	VCXmlElement *_currentElement;
-	NSMutableDictionary *_elementHandlers;
 }
 
-- (void) parseData:(NSData *) data;
-- (void) parseUrl:(NSString *) url;
-- (void) parseFile:(NSString *) file;
 
-- (void) addHandler:(NSString *)tag selector:(SEL)selector;
+
++ (VCXmlElement *) parseData:(NSData *) data;
++ (VCXmlElement *) parseUrl:(NSString *) url;
++ (VCXmlElement *) parseFile:(NSString *) file;
 
 @end
 
-@interface VCXmlElement : NSObject 
-{
-	NSString *_elementName;
-	NSDictionary *_attributes;
-}
-
-@end

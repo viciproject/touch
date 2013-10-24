@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -43,11 +43,9 @@
 {
 	if ((self = [super init])) 
 	{
-		_name = [name retain];
-		_object = [object retain];
-		_userInfo = [userInfo retain];
-		
-		[self retain];
+		_name = name;
+		_object = object;
+		_userInfo = userInfo;
 	}
 	
 	return self;
@@ -56,8 +54,6 @@
 - (void) postNotification 
 {
 	[[NSNotificationCenter defaultCenter] postNotificationName:_name object:_object userInfo:_userInfo];
-	
-	[self release];
 }
 
 - (void) postNotificationAfterDelay:(NSNumber *)seconds 
@@ -80,8 +76,6 @@
 	VCMainThreadNotifier *notifier = [[VCMainThreadNotifier alloc] initWithName:name object:object userInfo:userInfo];
 	
 	[notifier notifyAfterDelay:seconds];
-	
-	[notifier release];
 }
 
 + (void) notify:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo 
@@ -89,8 +83,6 @@
 	VCMainThreadNotifier *notifier = [[VCMainThreadNotifier alloc] initWithName:name object:object userInfo:userInfo];
 	
 	[notifier notify];
-	
-	[notifier release];
 }
 
 + (void) notify:(NSString *)name userInfo:(NSDictionary *)userInfo afterDelay:(float)seconds 
@@ -103,8 +95,7 @@
 	[VCMainThreadNotifier notify:name object:nil userInfo:nil afterDelay:seconds];
 }
 
-
-+ (void) notify:(NSString *)name object:(id)object afterDelay:(float)seconds 
++ (void) notify:(NSString *)name object:(id)object afterDelay:(float)seconds
 {
 	[VCMainThreadNotifier notify:name object:object userInfo:nil afterDelay:seconds];
 }
@@ -122,15 +113,6 @@
 + (void) notify:(NSString *)name 
 {
 	[VCMainThreadNotifier notify:name object:nil userInfo:nil];
-}
-
-- (void) dealloc 
-{
-	[_name release];
-	[_object release];
-	[_userInfo release];
-	
-	[super dealloc];
 }
 
 @end

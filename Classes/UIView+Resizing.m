@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -43,8 +43,13 @@
 
 - (void) setWidthTo:(float)width andHeightTo:(float)height
 {
-    [self setWidthTo:width];
-    [self setHeightTo:height];
+    [self setSizeTo:CGSizeMake(width, height)];
 }
+
+- (void) setSizeTo:(CGSize)size
+{
+    self.frame = CGRectMake(self.frame.origin.x,self.frame.origin.y,size.width,size.height);
+}
+
 
 @end

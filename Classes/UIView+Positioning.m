@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -34,11 +34,13 @@
 	self.frame = frame;
 }
 
-- (void) setYTo:(float)y
+- (float) setYTo:(float)y
 {
     CGRect frame = self.frame;
 	frame.origin.y = y;
 	self.frame = frame;
+    
+    return y + frame.size.height;
 }
 
 - (void) setXTo:(float)x andYTo:(float)y

@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -26,21 +26,16 @@
 
 @class VCStaticWebView;
 
-@protocol VCStaticWebViewDelegate
-
-- (void) staticWebView:(VCStaticWebView *)view sizeChanged:(CGSize)size;
-
-@end
-
-
 @interface VCStaticWebView : UIView<UIWebViewDelegate> 
-{
-	UIWebView *_webView;
-	UIView *_maskView;
-	id<VCStaticWebViewDelegate> _delegate;
-}
 
-@property (nonatomic,assign) id<VCStaticWebViewDelegate> delegate;
+@property (nonatomic,assign) BOOL transparent;
+@property (nonatomic,assign) BOOL interactive;
+
+@property (nonatomic, readonly) UIWebView *webView;
+
+@property (copy) void (^onSizeChanged)(CGSize);
+@property (copy) BOOL (^onLinkClicked)(NSURL *link);
+@property (copy) void (^onLoadCompleted)();
 
 - (void) setHTML:(NSString *)html;
 

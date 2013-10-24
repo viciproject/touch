@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -24,29 +24,195 @@
 
 #import "VCXmlParser.h"
 
-@implementation VCXmlParser
+@interface VCXmlParser()
 
-- (void) parseData:(NSData *)data 
+- (BOOL) parse:(NSData *)data;
+
+@end
+
+@interface VCXmlElement()
+{
+    NSMutableArray *_children;
+}
+
+@property (nonatomic,strong) VCXmlElement *parent;
+
+- (void) addChild:(VCXmlElement *)element;
+
++ (VCXmlElement *) elementWithName:(NSString *)name andAttributes:(NSDictionary *)attributes;
+
+@end
+
+@implementation VCXmlElement
+
++ (VCXmlElement *) elementWithName:(NSString *)name andAttributes:(NSDictionary *)attributes
+{
+    VCXmlElement *element = [[VCXmlElement alloc] init];
+    
+    element.name = name;
+    element.attributes = attributes;
+    
+    return element;
+}
+
+- (void) addChild:(VCXmlElement *)element
+{
+    if (!_children)
+        _children = [[NSMutableArray alloc] init];
+    
+    [_children addObject:element];
+}
+
+- (NSArray *) children
+{
+    return _children;
+}
+
+- (VCXmlElement *) findElement:(NSString *)name
+{
+    for (VCXmlElement *element in _children)
+    {
+        if ([element.name isEqualToString:name])
+            return element;
+    }
+    
+    return nil;
+}
+
+- (NSString *) findValue:(NSString *)name
+{
+    VCXmlElement *element = [self findElement:name];
+    
+    if (element)
+        return element.value;
+    
+    return nil;
+}
+
+- (NSDictionary *) toGraph
+{
+    NSMutableDictionary *value = [[NSMutableDictionary alloc] init];
+    
+    for (NSString *attributeName in self.attributes.keyEnumerator)
+        [value setObject:self.attributes[attributeName] forKey:[NSString stringWithFormat:@"@%@",attributeName]];
+    
+    if (self.value)
+        [value setObject:self.value forKey:@""];
+
+    for (VCXmlElement *element in self.children)
+    {
+        NSString *name = element.name;
+        
+        id existing = value[name];
+        NSDictionary *childGraph = [element toGraph];
+        
+        if (existing)
+        {
+            NSMutableArray *list;
+            
+            if ([existing isKindOfClass:[NSMutableArray class]])
+            {
+                list = (NSMutableArray *) existing;
+            }
+            else
+            {
+                list = [[NSMutableArray alloc] init];
+                
+                [list addObject:existing];
+                
+                [value setObject:list forKey:name];
+            }
+            
+            [list addObject:childGraph];
+        }
+        else
+        {
+            [value setObject:childGraph forKey:name];
+        }
+    }
+    
+    return value;
+}
+
+@end
+
+
+@implementation VCXmlParser
+{
+    NSMutableString * _text;
+    VCXmlElement * _currentElement;
+}
+
++ (VCXmlElement *) parseData:(NSData *)data
+{
+    VCXmlParser *parser = [VCXmlParser new];
+    
+    BOOL success = [parser parse:data];
+    
+    return success ? parser->_currentElement : nil;
+}
+
++ (VCXmlElement *) parseUrl:(NSString *)url
+{
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    
+    return [self parseData:data];
+}
+
++ (VCXmlElement *) parseFile:(NSString *)file
+{
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    
+    return [self parseData:data];
+}
+
+- (BOOL) parse:(NSData *)data
 {
 	NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
 	
 	parser.delegate = self;
-	
-	[parser release];
+    
+    _currentElement = nil;
+    _text = [[NSMutableString alloc] init];
+    
+    BOOL success = [parser parse];
+    
+    return success;
 }
 
-- (void) parseUrl:(NSString *)url 
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
+    VCXmlElement *element = [VCXmlElement elementWithName:elementName andAttributes:attributeDict];
+    
+    element.parent = _currentElement;
+
+    if (_currentElement)
+    {
+        [_currentElement addChild:element];
+    }
+    
+    _currentElement = element;
+    
+    [_text setString:@""];
 }
 
-- (void) parseFile:(NSString *)file 
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
-	
+    _currentElement.value = _text;
+    
+    if (_currentElement.parent)
+    {
+        _currentElement = _currentElement.parent;
+    }
+    
+    [_text setString:@""];
 }
 
-- (void) addHandler:(NSString *)tag selector:(SEL)selector 
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-	[_elementHandlers setObject:[NSValue valueWithPointer:selector] forKey:tag];
+    string   =   [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+    [_text appendString:string];
 }
 
 @end

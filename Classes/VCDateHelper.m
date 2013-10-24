@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -34,8 +34,6 @@
 	
 	NSString *s = [dateFormatter stringFromDate:date];
 	
-	[dateFormatter release];
-	
 	return s;
 }
 
@@ -51,8 +49,6 @@
 	[dateFormatter setDateFormat:formatString];
 	
 	NSDate *returnValue = [dateFormatter dateFromString:date];
-	
-	[dateFormatter release];
 	
 	return returnValue;
 }
@@ -70,29 +66,27 @@
 	
 	date = [gregorian dateFromComponents:components];
 
-	[gregorian release];
-	
 	return date;
 }
 
 + (NSDate *) addDays:(NSDate *)date days:(int)days 
 {
-	return [[[NSDate alloc] initWithTimeInterval:days * 24 * 60 * 60 sinceDate:date] autorelease];
+	return [[NSDate alloc] initWithTimeInterval:days * 24 * 60 * 60 sinceDate:date];
 }
 
 + (NSDate *) addHours:(NSDate *)date hours:(int)hours 
 {
-	return [[[NSDate alloc] initWithTimeInterval:hours * 60 * 60 sinceDate:date] autorelease];
+	return [[NSDate alloc] initWithTimeInterval:hours * 60 * 60 sinceDate:date];
 }
 
 + (NSDate *) addMinutes:(NSDate *)date minutes:(int)minutes 
 {
-	return [[[NSDate alloc] initWithTimeInterval:minutes * 60 sinceDate:date] autorelease];
+	return [[NSDate alloc] initWithTimeInterval:minutes * 60 sinceDate:date];
 }
 
 + (NSDate *) addSeconds:(NSDate *)date seconds:(float)seconds 
 {
-	return [[[NSDate alloc] initWithTimeInterval:seconds sinceDate:date] autorelease];
+	return [[NSDate alloc] initWithTimeInterval:seconds sinceDate:date];
 }
 
 @end
@@ -143,7 +137,7 @@
 	return [VCDateHelper addSeconds:self seconds:seconds];
 }
 
-- (NSDate *) addHours:(double)hours 
+- (NSDate *) addHours:(int)hours
 {
 	return [VCDateHelper addHours:self hours:hours];
 }

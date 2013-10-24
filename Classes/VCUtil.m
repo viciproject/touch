@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -30,6 +30,12 @@
 #include <sys/socket.h>
 #include <net/if_dl.h>
 #include <ifaddrs.h>
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 @implementation VCUtil
 
@@ -95,11 +101,9 @@ static int networkActivityCounter = 0;
 
 + (void) showAlertWithTitle:(NSString *)title andMessage:(NSString *)message
 {
-	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:TT(@"alert.button.ok") otherButtonTitles:nil];
 	
 	[alertView show];
-	
-	[alertView release];
 }
 
 + (BOOL) setNoBackupFlag:(NSString *)path
@@ -121,7 +125,7 @@ static int networkActivityCounter = 0;
 
 + (NSString *) uniqueIdWithKey:(NSData *)key
 {
-    NSMutableData *finalKey = [NSData dataWithData:[self macAddress]];
+    NSMutableData *finalKey = [NSMutableData  dataWithData:[self macAddress]];
     
     [finalKey appendData:key];
     
@@ -183,5 +187,84 @@ static int networkActivityCounter = 0;
     
     return [NSData dataWithBytes:macAddr length:6];
 }
+
++ (BOOL) isPad
+{
+    return ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad);
+}
+
++ (BOOL) isPhone
+{
+    return ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone);
+}
+
++ (BOOL) isTallPhone
+{
+    return ([self isPhone] && [UIApplication sharedApplication].keyWindow.frame.size.height > 500.0f);
+}
+
++ (BOOL) isSmallPhone
+{
+    return ([self isPhone] && ![self isTallPhone]);
+}
+
++ (BOOL) isLandscape:(UIViewController *)controller
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    return UIInterfaceOrientationIsLandscape(orientation) || UIDeviceOrientationIsLandscape(controller.interfaceOrientation);
+}
+
++ (BOOL) isOS7
+{
+    return SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0");
+}
+
++ (void) dispatch:(dispatch_block_t) block
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), block);
+}
+
++ (void) dispatchUI:(dispatch_block_t) block
+{
+    if ([NSThread isMainThread])
+        block();
+    else
+        dispatch_async(dispatch_get_main_queue(), block);
+}
+
++ (void) dispatchUI:(dispatch_block_t) block withDelay:(NSTimeInterval) delay
+{
+    double delayInSeconds = delay;
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    
+    dispatch_after(popTime, dispatch_get_main_queue(), block);
+}
+
+
++ (NSArray *) liftToArray:(id)object
+{
+    if (!object)
+        return nil;
+    
+    if ([object isKindOfClass:[NSArray class]])
+        return object;
+    
+    return [NSArray arrayWithObject:object];
+}
+
++ (NSArray *) liftToArrayNotNil:(id)object
+{
+    if (!object)
+        return [NSArray array];
+    
+    if ([object isKindOfClass:[NSArray class]])
+        return object;
+    
+    return [NSArray arrayWithObject:object];
+    
+}
+
 
 @end

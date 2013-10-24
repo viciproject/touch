@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -35,10 +35,9 @@
 
 @implementation VCLazyScrollView
 
-@synthesize currentIndex = _currentIndex;
-@synthesize visibleViews = _visibleViews;
+@synthesize delegate = _lazyScrollDelegate;
 
-- (id) initWithFrame:(CGRect)frame 
+- (id) initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame])) 
 	{
@@ -51,17 +50,12 @@
     return self;
 }
 
-- (id<VCLazyScrollViewDelegate>) delegate 
+- (int) currentIndex
 {
-	return _lazyScrollDelegate;
+    return _currentIndex;
 }
 
-- (void) setDelegate:(id<VCLazyScrollViewDelegate>)delegate 
-{
-	_lazyScrollDelegate = delegate;
-}
-
-- (void) setCurrentIndex:(int)index 
+- (void) setCurrentIndex:(int)index
 {
 	BOOL changed = NO;
 	
@@ -87,8 +81,8 @@
 		[self setCurrentIndex:index];
 }
 
-- (int) calculateCurrentIndex {
-	
+- (int) calculateCurrentIndex
+{
 	CGFloat index = self.contentOffset.x / self.bounds.size.width;
 	
 	return (int) (index + 0.5);
@@ -198,9 +192,7 @@
 	
 	if (view) 
 	{
-		[view retain];
 		[_recycledViews removeObject:view];
-		[view autorelease];
 	}
 
 	CGRect frame = CGRectMake(index*size.width, 0, size.width, size.height);
@@ -228,14 +220,6 @@
 		[self.nextResponder touchesEnded: touches withEvent:event]; 
 	
 	[super touchesEnded: touches withEvent: event];
-}
-
-- (void) dealloc 
-{
-	[_visibleViews release];
-	[_recycledViews release];
-	
-    [super dealloc];
 }
 
 @end

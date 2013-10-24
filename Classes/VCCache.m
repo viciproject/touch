@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -26,28 +26,16 @@
 
 @interface VCCacheEntry : NSObject
 {
-	NSString * key;
-	id value;
 }
 
-@property (nonatomic,copy) NSString *key;
-@property (nonatomic,retain) id value;
+@property (strong) NSString *key;
+@property (strong) id value;
 
 @end
 
 @implementation VCCacheEntry
-
-@synthesize key,value;
-
-- (void) dealloc
-{
-	[key release];
-	[value release];
-	
-	[super dealloc];
-}
-
 @end
+
 
 @implementation VCCache
 
@@ -85,22 +73,15 @@
 	return self;
 }
 
-
 - (void) dealloc
 {
-	[_entries release];
-	[_dic release];
-	
-	[super dealloc];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void) memoryWarning
 {
 	@synchronized(self)
 	{
-		[_entries release];
-		[_dic release];
-
 		_entries = [[NSMutableArray alloc] initWithCapacity:_maxEntries];
 		_dic = [[NSMutableDictionary alloc] initWithCapacity:_maxEntries];
 	}
@@ -154,8 +135,6 @@
 		
 		[_dic setObject:entry forKey:key];
 		[_entries insertObject:entry atIndex:0];
-		
-		[entry release];
 	}
 }
 

@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -29,16 +29,11 @@
 	NSURL *_url;
 	NSMutableData *_data;
 	NSURLConnection *_connection;
-	
-	BOOL _onMainThread;
-	
-	id _delegate;
-	id _userData;
 }
 
-@property (readonly) NSData *data;
-@property (retain) id userData;
-@property (assign) id delegate;
+@property (strong,readonly) NSData *data;
+@property (strong) id userData;
+@property (unsafe_unretained) id delegate;
 @property (assign) BOOL useMainThread;
 
 - (id) initWithUrl:(NSString *)url;

@@ -1,7 +1,7 @@
 //=============================================================================
 // Vici Touch - Productivity Library for Objective C / iOS SDK 
 //
-// Copyright (c) 2010-2011 Philippe Leybaert
+// Copyright (c) 2010-2013 Philippe Leybaert
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -27,18 +27,13 @@
 
 @interface VCOrderedDictionary ()
 
-@property (nonatomic, retain) NSMutableArray *keys;
-@property (nonatomic, retain) NSMutableDictionary *values;
+@property (strong) NSMutableArray *keys;
+@property (strong) NSMutableDictionary *values;
 
 @end
 
 
 @implementation VCOrderedDictionary
-
-
-@synthesize keys = _keys;
-@synthesize values = _values;
-
 
 #pragma mark - Initalization & deallocation
 
@@ -55,13 +50,6 @@
     return self;
 }
 
-- (void) dealloc
-{
-    [_keys release];
-    [_values release];
-    
-    [super dealloc];
-}
 
 #pragma mark - Public methods
 
@@ -82,6 +70,7 @@
 {
     return [_keys count];
 }
+
 - (NSArray *) getObjects
 {
     NSMutableArray *objects = [[NSMutableArray alloc] initWithCapacity:[_keys count]];
@@ -90,10 +79,9 @@
     {
         [objects addObject:[_values objectForKey:key]];
     }
-    
-    return [objects autorelease];
-}
 
+    return objects;
+}
 
 - (void) insertObject:(id)object forKey:(id)key atIndex:(NSUInteger)index
 {
@@ -176,6 +164,27 @@
     }
 }
 
+- (id) objectAtIndexedSubscript:(NSUInteger) idx
+{
+    return [self objectAtIndex:idx];
+}
+
+- (void) setObject:(id) object atIndexedSubscript:(NSUInteger)idx
+{
+    [self replaceObjectAtIndex:idx withObject:object];
+}
+
+- (id) objectForKeyedSubscript:(id)key
+{
+    return [self objectForKey:key];
+}
+
+- (void) setObject:(id)object forKeyedSubscript:(id)key
+{
+    [self setObject:object forKey:key];
+}
+
+
 #pragma mark - NSCoding protocol methods
 
 - (void) encodeWithCoder:(NSCoder *)aCoder
@@ -188,8 +197,8 @@
 {
     if (self = [super init])
     {
-        _keys = [[NSMutableArray arrayWithArray:[aDecoder decodeObjectForKey:@"keys"]] retain];
-        _values = [[NSMutableDictionary dictionaryWithDictionary:[aDecoder decodeObjectForKey:@"values"]] retain];
+        _keys = [NSMutableArray arrayWithArray:[aDecoder decodeObjectForKey:@"keys"]];
+        _values = [NSMutableDictionary dictionaryWithDictionary:[aDecoder decodeObjectForKey:@"values"]];
     }
     
     return self;
