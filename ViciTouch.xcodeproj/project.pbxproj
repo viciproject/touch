@@ -19,28 +19,6 @@
 		374ACA98127CC37E0017CF13 /* VCSqlParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8C127CC37E0017CF13 /* VCSqlParameter.m */; };
 		374ACA99127CC37E0017CF13 /* VCSqlParameterList.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA8D127CC37E0017CF13 /* VCSqlParameterList.h */; };
 		374ACA9A127CC37E0017CF13 /* VCSqlParameterList.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8E127CC37E0017CF13 /* VCSqlParameterList.m */; };
-		374ACA9B127CC37E0017CF13 /* VCDataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA83127CC37E0017CF13 /* VCDataObject.h */; };
-		374ACA9C127CC37E0017CF13 /* VCDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA84127CC37E0017CF13 /* VCDataObject.m */; };
-		374ACA9D127CC37E0017CF13 /* VCDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA85127CC37E0017CF13 /* VCDataStore.h */; };
-		374ACA9E127CC37E0017CF13 /* VCDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA86127CC37E0017CF13 /* VCDataStore.m */; };
-		374ACA9F127CC37E0017CF13 /* VCSqlCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA87127CC37E0017CF13 /* VCSqlCommand.h */; };
-		374ACAA0127CC37E0017CF13 /* VCSqlCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA88127CC37E0017CF13 /* VCSqlCommand.m */; };
-		374ACAA1127CC37E0017CF13 /* VCSqlDataTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA89127CC37E0017CF13 /* VCSqlDataTypes.h */; };
-		374ACAA2127CC37E0017CF13 /* VCSqlDataTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8A127CC37E0017CF13 /* VCSqlDataTypes.m */; };
-		374ACAA3127CC37E0017CF13 /* VCSqlParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA8B127CC37E0017CF13 /* VCSqlParameter.h */; };
-		374ACAA4127CC37E0017CF13 /* VCSqlParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8C127CC37E0017CF13 /* VCSqlParameter.m */; };
-		374ACAA5127CC37E0017CF13 /* VCSqlParameterList.h in Headers */ = {isa = PBXBuildFile; fileRef = 374ACA8D127CC37E0017CF13 /* VCSqlParameterList.h */; };
-		374ACAA6127CC37E0017CF13 /* VCSqlParameterList.m in Sources */ = {isa = PBXBuildFile; fileRef = 374ACA8E127CC37E0017CF13 /* VCSqlParameterList.m */; };
-		3761F407122416A1006098AE /* ViciTouch_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ViciTouch_Prefix.pch */; };
-		3761F408122416A1006098AE /* VCXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 37731DBA12213E8B00A97784 /* VCXmlParser.h */; };
-		3761F409122416A1006098AE /* VCAsyncDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 37731DCC12213F2400A97784 /* VCAsyncDownloader.h */; };
-		3761F40A122416A1006098AE /* VCMainThreadNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A5A146122401F50078A4F3 /* VCMainThreadNotifier.h */; };
-		3761F40B122416A1006098AE /* VCDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A5A176122408A00078A4F3 /* VCDateHelper.h */; };
-		3761F40D122416A1006098AE /* VCXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37731DBB12213E8B00A97784 /* VCXmlParser.m */; };
-		3761F40E122416A1006098AE /* VCAsyncDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37731DCD12213F2400A97784 /* VCAsyncDownloader.m */; };
-		3761F40F122416A1006098AE /* VCMainThreadNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5A147122401F50078A4F3 /* VCMainThreadNotifier.m */; };
-		3761F410122416A1006098AE /* VCDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5A177122408A00078A4F3 /* VCDateHelper.m */; };
-		3761F412122416A1006098AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		37731DBC12213E8B00A97784 /* VCXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 37731DBA12213E8B00A97784 /* VCXmlParser.h */; };
 		37731DBD12213E8B00A97784 /* VCXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37731DBB12213E8B00A97784 /* VCXmlParser.m */; };
 		37731DCE12213F2400A97784 /* VCAsyncDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 37731DCC12213F2400A97784 /* VCAsyncDownloader.h */; };
@@ -55,43 +33,60 @@
 		37DD47791265CFEA00CA0D47 /* VCLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47731265CFEA00CA0D47 /* VCLazyScrollView.m */; };
 		37DD477A1265CFEA00CA0D47 /* VCStaticWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47741265CFEA00CA0D47 /* VCStaticWebView.h */; };
 		37DD477B1265CFEA00CA0D47 /* VCStaticWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47751265CFEA00CA0D47 /* VCStaticWebView.m */; };
-		37DD477C1265CFEA00CA0D47 /* VCLazyImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47701265CFEA00CA0D47 /* VCLazyImageView.h */; };
-		37DD477D1265CFEA00CA0D47 /* VCLazyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47711265CFEA00CA0D47 /* VCLazyImageView.m */; };
-		37DD477E1265CFEA00CA0D47 /* VCLazyScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47721265CFEA00CA0D47 /* VCLazyScrollView.h */; };
-		37DD477F1265CFEA00CA0D47 /* VCLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47731265CFEA00CA0D47 /* VCLazyScrollView.m */; };
-		37DD47801265CFEA00CA0D47 /* VCStaticWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD47741265CFEA00CA0D47 /* VCStaticWebView.h */; };
-		37DD47811265CFEA00CA0D47 /* VCStaticWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD47751265CFEA00CA0D47 /* VCStaticWebView.m */; };
 		37F38BD2126483130044A2E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F38BD1126483130044A2E3 /* UIKit.framework */; };
+		37F58FDE18195C78009198D2 /* NSMutableArray+Filtering.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FB918195C78009198D2 /* NSMutableArray+Filtering.h */; };
+		37F58FE018195C78009198D2 /* NSMutableArray+Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FBA18195C78009198D2 /* NSMutableArray+Filtering.m */; };
+		37F58FE218195C78009198D2 /* UIColor+Vici.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FBB18195C78009198D2 /* UIColor+Vici.h */; };
+		37F58FE418195C78009198D2 /* UIColor+Vici.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FBC18195C78009198D2 /* UIColor+Vici.m */; };
+		37F58FE618195C78009198D2 /* UILabel+Resizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FBD18195C78009198D2 /* UILabel+Resizing.h */; };
+		37F58FE818195C78009198D2 /* UILabel+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FBE18195C78009198D2 /* UILabel+Resizing.m */; };
+		37F58FEA18195C78009198D2 /* UITableViewCell+VCStyler.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FBF18195C78009198D2 /* UITableViewCell+VCStyler.h */; };
+		37F58FEC18195C78009198D2 /* UITableViewCell+VCStyler.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FC018195C78009198D2 /* UITableViewCell+VCStyler.m */; };
+		37F58FEE18195C78009198D2 /* UIView+GestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FC118195C78009198D2 /* UIView+GestureRecognizer.h */; };
+		37F58FF018195C78009198D2 /* UIView+GestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FC218195C78009198D2 /* UIView+GestureRecognizer.m */; };
+		37F58FF218195C78009198D2 /* UIView+Mask.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FC318195C78009198D2 /* UIView+Mask.h */; };
+		37F58FF418195C78009198D2 /* UIView+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FC418195C78009198D2 /* UIView+Mask.m */; };
+		37F58FF618195C78009198D2 /* UIViewController+Containment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FC518195C78009198D2 /* UIViewController+Containment.h */; };
+		37F58FF818195C78009198D2 /* UIViewController+Containment.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FC618195C78009198D2 /* UIViewController+Containment.m */; };
+		37F58FFA18195C78009198D2 /* VCAttributedValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FC718195C78009198D2 /* VCAttributedValue.h */; };
+		37F58FFC18195C78009198D2 /* VCAttributedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FC818195C78009198D2 /* VCAttributedValue.m */; };
+		37F58FFE18195C78009198D2 /* VCButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FC918195C78009198D2 /* VCButton.h */; };
+		37F5900018195C78009198D2 /* VCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FCA18195C78009198D2 /* VCButton.m */; };
+		37F5900218195C78009198D2 /* VCCellStylerState.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FCB18195C78009198D2 /* VCCellStylerState.h */; };
+		37F5900418195C78009198D2 /* VCCellStylerState.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FCC18195C78009198D2 /* VCCellStylerState.m */; };
+		37F5900618195C78009198D2 /* VCColoredArrowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FCD18195C78009198D2 /* VCColoredArrowView.h */; };
+		37F5900818195C78009198D2 /* VCColoredArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FCE18195C78009198D2 /* VCColoredArrowView.m */; };
+		37F5900A18195C78009198D2 /* VCPopupController.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FCF18195C78009198D2 /* VCPopupController.h */; };
+		37F5900C18195C78009198D2 /* VCPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FD018195C78009198D2 /* VCPopupController.m */; };
+		37F5900E18195C78009198D2 /* VCSolidView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FD118195C78009198D2 /* VCSolidView.h */; };
+		37F5901018195C78009198D2 /* VCSolidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FD218195C78009198D2 /* VCSolidView.m */; };
+		37F5901218195C78009198D2 /* VCSpinnerBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FD318195C78009198D2 /* VCSpinnerBox.h */; };
+		37F5901418195C78009198D2 /* VCSpinnerBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FD418195C78009198D2 /* VCSpinnerBox.m */; };
+		37F5901618195C78009198D2 /* VCTableStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FD518195C78009198D2 /* VCTableStyle.h */; };
+		37F5901818195C78009198D2 /* VCTableStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FD618195C78009198D2 /* VCTableStyle.m */; };
+		37F5901A18195C78009198D2 /* VCTableViewCellWithNib.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FD718195C78009198D2 /* VCTableViewCellWithNib.h */; };
+		37F5901C18195C78009198D2 /* VCTableViewCellWithNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FD818195C78009198D2 /* VCTableViewCellWithNib.m */; };
+		37F5901E18195C78009198D2 /* VCToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FD918195C78009198D2 /* VCToast.h */; };
+		37F5902018195C78009198D2 /* VCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FDA18195C78009198D2 /* VCToast.m */; };
+		37F5902218195C78009198D2 /* VCViewWithNib.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FDB18195C78009198D2 /* VCViewWithNib.h */; };
+		37F5902418195C78009198D2 /* VCViewWithNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F58FDC18195C78009198D2 /* VCViewWithNib.m */; };
+		37F5902618195C78009198D2 /* ViciTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F58FDD18195C78009198D2 /* ViciTouch.h */; };
 		AA747D9F0F9514B9006C5449 /* ViciTouch_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ViciTouch_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		AC87F678133D47260029B9C0 /* UIView+Resizing.h in Headers */ = {isa = PBXBuildFile; fileRef = AC87F676133D47260029B9C0 /* UIView+Resizing.h */; };
-		AC87F679133D47260029B9C0 /* UIView+Resizing.h in Headers */ = {isa = PBXBuildFile; fileRef = AC87F676133D47260029B9C0 /* UIView+Resizing.h */; };
 		AC87F67A133D47260029B9C0 /* UIView+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = AC87F677133D47260029B9C0 /* UIView+Resizing.m */; };
-		AC87F67B133D47260029B9C0 /* UIView+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = AC87F677133D47260029B9C0 /* UIView+Resizing.m */; };
 		AC87F685133D48D20029B9C0 /* UIView+Positioning.h in Headers */ = {isa = PBXBuildFile; fileRef = AC87F683133D48D20029B9C0 /* UIView+Positioning.h */; };
-		AC87F686133D48D20029B9C0 /* UIView+Positioning.h in Headers */ = {isa = PBXBuildFile; fileRef = AC87F683133D48D20029B9C0 /* UIView+Positioning.h */; };
 		AC87F687133D48D20029B9C0 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = AC87F684133D48D20029B9C0 /* UIView+Positioning.m */; };
-		AC87F688133D48D20029B9C0 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = AC87F684133D48D20029B9C0 /* UIView+Positioning.m */; };
 		ACB4F0A71348C140005E7FCF /* VCSqlFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0A51348C140005E7FCF /* VCSqlFunction.h */; };
-		ACB4F0A81348C140005E7FCF /* VCSqlFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0A51348C140005E7FCF /* VCSqlFunction.h */; };
 		ACB4F0A91348C140005E7FCF /* VCSqlFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0A61348C140005E7FCF /* VCSqlFunction.m */; };
-		ACB4F0AA1348C140005E7FCF /* VCSqlFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0A61348C140005E7FCF /* VCSqlFunction.m */; };
 		ACB4F0AE1348C175005E7FCF /* VCCache.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0AC1348C174005E7FCF /* VCCache.h */; };
-		ACB4F0AF1348C175005E7FCF /* VCCache.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0AC1348C174005E7FCF /* VCCache.h */; };
 		ACB4F0B01348C175005E7FCF /* VCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0AD1348C174005E7FCF /* VCCache.m */; };
-		ACB4F0B11348C175005E7FCF /* VCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0AD1348C174005E7FCF /* VCCache.m */; };
 		ACB4F0B41348C18D005E7FCF /* VCUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0B21348C18D005E7FCF /* VCUtil.h */; };
-		ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB4F0B21348C18D005E7FCF /* VCUtil.h */; };
 		ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
-		ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F0B31348C18D005E7FCF /* VCUtil.m */; };
 		ACE2545C142E6DEA007F34FF /* NSArray+FirstObject.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE2545A142E6DEA007F34FF /* NSArray+FirstObject.h */; };
-		ACE2545D142E6DEA007F34FF /* NSArray+FirstObject.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE2545A142E6DEA007F34FF /* NSArray+FirstObject.h */; };
 		ACE2545E142E6DEA007F34FF /* NSArray+FirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE2545B142E6DEA007F34FF /* NSArray+FirstObject.m */; };
-		ACE2545F142E6DEA007F34FF /* NSArray+FirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE2545B142E6DEA007F34FF /* NSArray+FirstObject.m */; };
 		B8A507B31428DB1D00D3CE39 /* VCOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B8A507B11428DB1D00D3CE39 /* VCOrderedDictionary.h */; };
-		B8A507B41428DB1D00D3CE39 /* VCOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B8A507B11428DB1D00D3CE39 /* VCOrderedDictionary.h */; };
 		B8A507B51428DB1D00D3CE39 /* VCOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A507B21428DB1D00D3CE39 /* VCOrderedDictionary.m */; };
-		B8A507B61428DB1D00D3CE39 /* VCOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A507B21428DB1D00D3CE39 /* VCOrderedDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,7 +102,6 @@
 		374ACA8C127CC37E0017CF13 /* VCSqlParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSqlParameter.m; sourceTree = "<group>"; };
 		374ACA8D127CC37E0017CF13 /* VCSqlParameterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSqlParameterList.h; sourceTree = "<group>"; };
 		374ACA8E127CC37E0017CF13 /* VCSqlParameterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSqlParameterList.m; sourceTree = "<group>"; };
-		3761F416122416A1006098AE /* libViciTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libViciTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		37731DBA12213E8B00A97784 /* VCXmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCXmlParser.h; path = Classes/VCXmlParser.h; sourceTree = "<group>"; };
 		37731DBB12213E8B00A97784 /* VCXmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCXmlParser.m; path = Classes/VCXmlParser.m; sourceTree = "<group>"; };
 		37731DCC12213F2400A97784 /* VCAsyncDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCAsyncDownloader.h; path = Classes/VCAsyncDownloader.h; sourceTree = "<group>"; };
@@ -123,6 +117,43 @@
 		37DD47741265CFEA00CA0D47 /* VCStaticWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCStaticWebView.h; path = Classes/VCStaticWebView.h; sourceTree = "<group>"; };
 		37DD47751265CFEA00CA0D47 /* VCStaticWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCStaticWebView.m; path = Classes/VCStaticWebView.m; sourceTree = "<group>"; };
 		37F38BD1126483130044A2E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		37F58FB918195C78009198D2 /* NSMutableArray+Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Filtering.h"; path = "Classes/NSMutableArray+Filtering.h"; sourceTree = "<group>"; };
+		37F58FBA18195C78009198D2 /* NSMutableArray+Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Filtering.m"; path = "Classes/NSMutableArray+Filtering.m"; sourceTree = "<group>"; };
+		37F58FBB18195C78009198D2 /* UIColor+Vici.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Vici.h"; path = "Classes/UIColor+Vici.h"; sourceTree = "<group>"; };
+		37F58FBC18195C78009198D2 /* UIColor+Vici.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Vici.m"; path = "Classes/UIColor+Vici.m"; sourceTree = "<group>"; };
+		37F58FBD18195C78009198D2 /* UILabel+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Resizing.h"; path = "Classes/UILabel+Resizing.h"; sourceTree = "<group>"; };
+		37F58FBE18195C78009198D2 /* UILabel+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Resizing.m"; path = "Classes/UILabel+Resizing.m"; sourceTree = "<group>"; };
+		37F58FBF18195C78009198D2 /* UITableViewCell+VCStyler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+VCStyler.h"; path = "Classes/UITableViewCell+VCStyler.h"; sourceTree = "<group>"; };
+		37F58FC018195C78009198D2 /* UITableViewCell+VCStyler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+VCStyler.m"; path = "Classes/UITableViewCell+VCStyler.m"; sourceTree = "<group>"; };
+		37F58FC118195C78009198D2 /* UIView+GestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+GestureRecognizer.h"; path = "Classes/UIView+GestureRecognizer.h"; sourceTree = "<group>"; };
+		37F58FC218195C78009198D2 /* UIView+GestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+GestureRecognizer.m"; path = "Classes/UIView+GestureRecognizer.m"; sourceTree = "<group>"; };
+		37F58FC318195C78009198D2 /* UIView+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Mask.h"; path = "Classes/UIView+Mask.h"; sourceTree = "<group>"; };
+		37F58FC418195C78009198D2 /* UIView+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Mask.m"; path = "Classes/UIView+Mask.m"; sourceTree = "<group>"; };
+		37F58FC518195C78009198D2 /* UIViewController+Containment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Containment.h"; path = "Classes/UIViewController+Containment.h"; sourceTree = "<group>"; };
+		37F58FC618195C78009198D2 /* UIViewController+Containment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Containment.m"; path = "Classes/UIViewController+Containment.m"; sourceTree = "<group>"; };
+		37F58FC718195C78009198D2 /* VCAttributedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCAttributedValue.h; path = Classes/VCAttributedValue.h; sourceTree = "<group>"; };
+		37F58FC818195C78009198D2 /* VCAttributedValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCAttributedValue.m; path = Classes/VCAttributedValue.m; sourceTree = "<group>"; };
+		37F58FC918195C78009198D2 /* VCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCButton.h; path = Classes/VCButton.h; sourceTree = "<group>"; };
+		37F58FCA18195C78009198D2 /* VCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCButton.m; path = Classes/VCButton.m; sourceTree = "<group>"; };
+		37F58FCB18195C78009198D2 /* VCCellStylerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCCellStylerState.h; path = Classes/VCCellStylerState.h; sourceTree = "<group>"; };
+		37F58FCC18195C78009198D2 /* VCCellStylerState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCCellStylerState.m; path = Classes/VCCellStylerState.m; sourceTree = "<group>"; };
+		37F58FCD18195C78009198D2 /* VCColoredArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCColoredArrowView.h; path = Classes/VCColoredArrowView.h; sourceTree = "<group>"; };
+		37F58FCE18195C78009198D2 /* VCColoredArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCColoredArrowView.m; path = Classes/VCColoredArrowView.m; sourceTree = "<group>"; };
+		37F58FCF18195C78009198D2 /* VCPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCPopupController.h; path = Classes/VCPopupController.h; sourceTree = "<group>"; };
+		37F58FD018195C78009198D2 /* VCPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCPopupController.m; path = Classes/VCPopupController.m; sourceTree = "<group>"; };
+		37F58FD118195C78009198D2 /* VCSolidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCSolidView.h; path = Classes/VCSolidView.h; sourceTree = "<group>"; };
+		37F58FD218195C78009198D2 /* VCSolidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCSolidView.m; path = Classes/VCSolidView.m; sourceTree = "<group>"; };
+		37F58FD318195C78009198D2 /* VCSpinnerBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCSpinnerBox.h; path = Classes/VCSpinnerBox.h; sourceTree = "<group>"; };
+		37F58FD418195C78009198D2 /* VCSpinnerBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCSpinnerBox.m; path = Classes/VCSpinnerBox.m; sourceTree = "<group>"; };
+		37F58FD518195C78009198D2 /* VCTableStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCTableStyle.h; path = Classes/VCTableStyle.h; sourceTree = "<group>"; };
+		37F58FD618195C78009198D2 /* VCTableStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCTableStyle.m; path = Classes/VCTableStyle.m; sourceTree = "<group>"; };
+		37F58FD718195C78009198D2 /* VCTableViewCellWithNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCTableViewCellWithNib.h; path = Classes/VCTableViewCellWithNib.h; sourceTree = "<group>"; };
+		37F58FD818195C78009198D2 /* VCTableViewCellWithNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCTableViewCellWithNib.m; path = Classes/VCTableViewCellWithNib.m; sourceTree = "<group>"; };
+		37F58FD918195C78009198D2 /* VCToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCToast.h; path = Classes/VCToast.h; sourceTree = "<group>"; };
+		37F58FDA18195C78009198D2 /* VCToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCToast.m; path = Classes/VCToast.m; sourceTree = "<group>"; };
+		37F58FDB18195C78009198D2 /* VCViewWithNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCViewWithNib.h; path = Classes/VCViewWithNib.h; sourceTree = "<group>"; };
+		37F58FDC18195C78009198D2 /* VCViewWithNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCViewWithNib.m; path = Classes/VCViewWithNib.m; sourceTree = "<group>"; };
+		37F58FDD18195C78009198D2 /* ViciTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViciTouch.h; path = Classes/ViciTouch.h; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ViciTouch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViciTouch_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC87F676133D47260029B9C0 /* UIView+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Resizing.h"; path = "Classes/UIView+Resizing.h"; sourceTree = "<group>"; };
@@ -143,14 +174,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3761F411122416A1006098AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3761F412122416A1006098AE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D2AAC07C0554694100DB518D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libViciTouch.a */,
-				3761F416122416A1006098AE /* libViciTouch.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,6 +217,43 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				37F58FB918195C78009198D2 /* NSMutableArray+Filtering.h */,
+				37F58FBA18195C78009198D2 /* NSMutableArray+Filtering.m */,
+				37F58FBB18195C78009198D2 /* UIColor+Vici.h */,
+				37F58FBC18195C78009198D2 /* UIColor+Vici.m */,
+				37F58FBD18195C78009198D2 /* UILabel+Resizing.h */,
+				37F58FBE18195C78009198D2 /* UILabel+Resizing.m */,
+				37F58FBF18195C78009198D2 /* UITableViewCell+VCStyler.h */,
+				37F58FC018195C78009198D2 /* UITableViewCell+VCStyler.m */,
+				37F58FC118195C78009198D2 /* UIView+GestureRecognizer.h */,
+				37F58FC218195C78009198D2 /* UIView+GestureRecognizer.m */,
+				37F58FC318195C78009198D2 /* UIView+Mask.h */,
+				37F58FC418195C78009198D2 /* UIView+Mask.m */,
+				37F58FC518195C78009198D2 /* UIViewController+Containment.h */,
+				37F58FC618195C78009198D2 /* UIViewController+Containment.m */,
+				37F58FC718195C78009198D2 /* VCAttributedValue.h */,
+				37F58FC818195C78009198D2 /* VCAttributedValue.m */,
+				37F58FC918195C78009198D2 /* VCButton.h */,
+				37F58FCA18195C78009198D2 /* VCButton.m */,
+				37F58FCB18195C78009198D2 /* VCCellStylerState.h */,
+				37F58FCC18195C78009198D2 /* VCCellStylerState.m */,
+				37F58FCD18195C78009198D2 /* VCColoredArrowView.h */,
+				37F58FCE18195C78009198D2 /* VCColoredArrowView.m */,
+				37F58FCF18195C78009198D2 /* VCPopupController.h */,
+				37F58FD018195C78009198D2 /* VCPopupController.m */,
+				37F58FD118195C78009198D2 /* VCSolidView.h */,
+				37F58FD218195C78009198D2 /* VCSolidView.m */,
+				37F58FD318195C78009198D2 /* VCSpinnerBox.h */,
+				37F58FD418195C78009198D2 /* VCSpinnerBox.m */,
+				37F58FD518195C78009198D2 /* VCTableStyle.h */,
+				37F58FD618195C78009198D2 /* VCTableStyle.m */,
+				37F58FD718195C78009198D2 /* VCTableViewCellWithNib.h */,
+				37F58FD818195C78009198D2 /* VCTableViewCellWithNib.m */,
+				37F58FD918195C78009198D2 /* VCToast.h */,
+				37F58FDA18195C78009198D2 /* VCToast.m */,
+				37F58FDB18195C78009198D2 /* VCViewWithNib.h */,
+				37F58FDC18195C78009198D2 /* VCViewWithNib.m */,
+				37F58FDD18195C78009198D2 /* ViciTouch.h */,
 				374ACA82127CC37E0017CF13 /* SQL */,
 				37DD47371265CD2C00CA0D47 /* Threading */,
 				37F38BB6126482C40044A2E3 /* Views */,
@@ -291,34 +350,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3761F406122416A1006098AE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3761F407122416A1006098AE /* ViciTouch_Prefix.pch in Headers */,
-				3761F408122416A1006098AE /* VCXmlParser.h in Headers */,
-				3761F409122416A1006098AE /* VCAsyncDownloader.h in Headers */,
-				3761F40A122416A1006098AE /* VCMainThreadNotifier.h in Headers */,
-				3761F40B122416A1006098AE /* VCDateHelper.h in Headers */,
-				37DD477C1265CFEA00CA0D47 /* VCLazyImageView.h in Headers */,
-				37DD477E1265CFEA00CA0D47 /* VCLazyScrollView.h in Headers */,
-				37DD47801265CFEA00CA0D47 /* VCStaticWebView.h in Headers */,
-				374ACA9B127CC37E0017CF13 /* VCDataObject.h in Headers */,
-				374ACA9D127CC37E0017CF13 /* VCDataStore.h in Headers */,
-				374ACA9F127CC37E0017CF13 /* VCSqlCommand.h in Headers */,
-				374ACAA1127CC37E0017CF13 /* VCSqlDataTypes.h in Headers */,
-				374ACAA3127CC37E0017CF13 /* VCSqlParameter.h in Headers */,
-				374ACAA5127CC37E0017CF13 /* VCSqlParameterList.h in Headers */,
-				AC87F679133D47260029B9C0 /* UIView+Resizing.h in Headers */,
-				AC87F686133D48D20029B9C0 /* UIView+Positioning.h in Headers */,
-				ACB4F0A81348C140005E7FCF /* VCSqlFunction.h in Headers */,
-				ACB4F0AF1348C175005E7FCF /* VCCache.h in Headers */,
-				ACB4F0B51348C18D005E7FCF /* VCUtil.h in Headers */,
-				B8A507B41428DB1D00D3CE39 /* VCOrderedDictionary.h in Headers */,
-				ACE2545D142E6DEA007F34FF /* NSArray+FirstObject.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D2AAC07A0554694100DB518D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,50 +357,52 @@
 				AA747D9F0F9514B9006C5449 /* ViciTouch_Prefix.pch in Headers */,
 				37731DBC12213E8B00A97784 /* VCXmlParser.h in Headers */,
 				37731DCE12213F2400A97784 /* VCAsyncDownloader.h in Headers */,
+				37F5901E18195C78009198D2 /* VCToast.h in Headers */,
+				37F58FEA18195C78009198D2 /* UITableViewCell+VCStyler.h in Headers */,
 				37A5A148122401F50078A4F3 /* VCMainThreadNotifier.h in Headers */,
+				37F58FE618195C78009198D2 /* UILabel+Resizing.h in Headers */,
 				37A5A178122408A00078A4F3 /* VCDateHelper.h in Headers */,
 				37DD47761265CFEA00CA0D47 /* VCLazyImageView.h in Headers */,
+				37F5900A18195C78009198D2 /* VCPopupController.h in Headers */,
 				37DD47781265CFEA00CA0D47 /* VCLazyScrollView.h in Headers */,
+				37F5901A18195C78009198D2 /* VCTableViewCellWithNib.h in Headers */,
 				37DD477A1265CFEA00CA0D47 /* VCStaticWebView.h in Headers */,
 				374ACA8F127CC37E0017CF13 /* VCDataObject.h in Headers */,
+				37F58FFE18195C78009198D2 /* VCButton.h in Headers */,
 				374ACA91127CC37E0017CF13 /* VCDataStore.h in Headers */,
+				37F5901618195C78009198D2 /* VCTableStyle.h in Headers */,
 				374ACA93127CC37E0017CF13 /* VCSqlCommand.h in Headers */,
+				37F58FEE18195C78009198D2 /* UIView+GestureRecognizer.h in Headers */,
+				37F5900E18195C78009198D2 /* VCSolidView.h in Headers */,
+				37F58FFA18195C78009198D2 /* VCAttributedValue.h in Headers */,
+				37F5900218195C78009198D2 /* VCCellStylerState.h in Headers */,
+				37F5900618195C78009198D2 /* VCColoredArrowView.h in Headers */,
+				37F5902218195C78009198D2 /* VCViewWithNib.h in Headers */,
 				374ACA95127CC37E0017CF13 /* VCSqlDataTypes.h in Headers */,
+				37F5901218195C78009198D2 /* VCSpinnerBox.h in Headers */,
 				374ACA97127CC37E0017CF13 /* VCSqlParameter.h in Headers */,
 				374ACA99127CC37E0017CF13 /* VCSqlParameterList.h in Headers */,
+				37F58FE218195C78009198D2 /* UIColor+Vici.h in Headers */,
 				AC87F678133D47260029B9C0 /* UIView+Resizing.h in Headers */,
 				AC87F685133D48D20029B9C0 /* UIView+Positioning.h in Headers */,
+				37F5902618195C78009198D2 /* ViciTouch.h in Headers */,
 				ACB4F0A71348C140005E7FCF /* VCSqlFunction.h in Headers */,
+				37F58FF218195C78009198D2 /* UIView+Mask.h in Headers */,
 				ACB4F0AE1348C175005E7FCF /* VCCache.h in Headers */,
 				ACB4F0B41348C18D005E7FCF /* VCUtil.h in Headers */,
+				37F58FF618195C78009198D2 /* UIViewController+Containment.h in Headers */,
 				B8A507B31428DB1D00D3CE39 /* VCOrderedDictionary.h in Headers */,
 				ACE2545C142E6DEA007F34FF /* NSArray+FirstObject.h in Headers */,
+				37F58FDE18195C78009198D2 /* NSMutableArray+Filtering.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3761F405122416A1006098AE /* ViciTouch4 */ = {
+		D2AAC07D0554694100DB518D /* ViciTouch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3761F413122416A1006098AE /* Build configuration list for PBXNativeTarget "ViciTouch4" */;
-			buildPhases = (
-				3761F406122416A1006098AE /* Headers */,
-				3761F40C122416A1006098AE /* Sources */,
-				3761F411122416A1006098AE /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ViciTouch4;
-			productName = ViciTouch;
-			productReference = 3761F416122416A1006098AE /* libViciTouch.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D2AAC07D0554694100DB518D /* ViciTouch3 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ViciTouch3" */;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ViciTouch" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -379,7 +412,7 @@
 			);
 			dependencies = (
 			);
-			name = ViciTouch3;
+			name = ViciTouch;
 			productName = ViciTouch;
 			productReference = D2AAC07E0554694100DB518D /* libViciTouch.a */;
 			productType = "com.apple.product-type.library.static";
@@ -389,6 +422,8 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ViciTouch" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -404,64 +439,54 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* ViciTouch3 */,
-				3761F405122416A1006098AE /* ViciTouch4 */,
+				D2AAC07D0554694100DB518D /* ViciTouch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3761F40C122416A1006098AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3761F40D122416A1006098AE /* VCXmlParser.m in Sources */,
-				3761F40E122416A1006098AE /* VCAsyncDownloader.m in Sources */,
-				3761F40F122416A1006098AE /* VCMainThreadNotifier.m in Sources */,
-				3761F410122416A1006098AE /* VCDateHelper.m in Sources */,
-				37DD477D1265CFEA00CA0D47 /* VCLazyImageView.m in Sources */,
-				37DD477F1265CFEA00CA0D47 /* VCLazyScrollView.m in Sources */,
-				37DD47811265CFEA00CA0D47 /* VCStaticWebView.m in Sources */,
-				374ACA9C127CC37E0017CF13 /* VCDataObject.m in Sources */,
-				374ACA9E127CC37E0017CF13 /* VCDataStore.m in Sources */,
-				374ACAA0127CC37E0017CF13 /* VCSqlCommand.m in Sources */,
-				374ACAA2127CC37E0017CF13 /* VCSqlDataTypes.m in Sources */,
-				374ACAA4127CC37E0017CF13 /* VCSqlParameter.m in Sources */,
-				374ACAA6127CC37E0017CF13 /* VCSqlParameterList.m in Sources */,
-				AC87F67B133D47260029B9C0 /* UIView+Resizing.m in Sources */,
-				AC87F688133D48D20029B9C0 /* UIView+Positioning.m in Sources */,
-				ACB4F0AA1348C140005E7FCF /* VCSqlFunction.m in Sources */,
-				ACB4F0B11348C175005E7FCF /* VCCache.m in Sources */,
-				ACB4F0B71348C18D005E7FCF /* VCUtil.m in Sources */,
-				B8A507B61428DB1D00D3CE39 /* VCOrderedDictionary.m in Sources */,
-				ACE2545F142E6DEA007F34FF /* NSArray+FirstObject.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				37731DBD12213E8B00A97784 /* VCXmlParser.m in Sources */,
 				37731DCF12213F2400A97784 /* VCAsyncDownloader.m in Sources */,
+				37F5900818195C78009198D2 /* VCColoredArrowView.m in Sources */,
 				37A5A149122401F50078A4F3 /* VCMainThreadNotifier.m in Sources */,
+				37F58FF818195C78009198D2 /* UIViewController+Containment.m in Sources */,
 				37A5A179122408A00078A4F3 /* VCDateHelper.m in Sources */,
+				37F58FF418195C78009198D2 /* UIView+Mask.m in Sources */,
 				37DD47771265CFEA00CA0D47 /* VCLazyImageView.m in Sources */,
 				37DD47791265CFEA00CA0D47 /* VCLazyScrollView.m in Sources */,
 				37DD477B1265CFEA00CA0D47 /* VCStaticWebView.m in Sources */,
 				374ACA90127CC37E0017CF13 /* VCDataObject.m in Sources */,
 				374ACA92127CC37E0017CF13 /* VCDataStore.m in Sources */,
+				37F5900018195C78009198D2 /* VCButton.m in Sources */,
+				37F5902018195C78009198D2 /* VCToast.m in Sources */,
 				374ACA94127CC37E0017CF13 /* VCSqlCommand.m in Sources */,
 				374ACA96127CC37E0017CF13 /* VCSqlDataTypes.m in Sources */,
 				374ACA98127CC37E0017CF13 /* VCSqlParameter.m in Sources */,
+				37F58FE018195C78009198D2 /* NSMutableArray+Filtering.m in Sources */,
 				374ACA9A127CC37E0017CF13 /* VCSqlParameterList.m in Sources */,
 				AC87F67A133D47260029B9C0 /* UIView+Resizing.m in Sources */,
 				AC87F687133D48D20029B9C0 /* UIView+Positioning.m in Sources */,
+				37F5901C18195C78009198D2 /* VCTableViewCellWithNib.m in Sources */,
+				37F58FE818195C78009198D2 /* UILabel+Resizing.m in Sources */,
+				37F5902418195C78009198D2 /* VCViewWithNib.m in Sources */,
 				ACB4F0A91348C140005E7FCF /* VCSqlFunction.m in Sources */,
+				37F5900418195C78009198D2 /* VCCellStylerState.m in Sources */,
 				ACB4F0B01348C175005E7FCF /* VCCache.m in Sources */,
+				37F58FE418195C78009198D2 /* UIColor+Vici.m in Sources */,
 				ACB4F0B61348C18D005E7FCF /* VCUtil.m in Sources */,
+				37F58FEC18195C78009198D2 /* UITableViewCell+VCStyler.m in Sources */,
+				37F58FFC18195C78009198D2 /* VCAttributedValue.m in Sources */,
+				37F5901418195C78009198D2 /* VCSpinnerBox.m in Sources */,
+				37F58FF018195C78009198D2 /* UIView+GestureRecognizer.m in Sources */,
+				37F5901018195C78009198D2 /* VCSolidView.m in Sources */,
 				B8A507B51428DB1D00D3CE39 /* VCOrderedDictionary.m in Sources */,
 				ACE2545E142E6DEA007F34FF /* NSArray+FirstObject.m in Sources */,
+				37F5900C18195C78009198D2 /* VCPopupController.m in Sources */,
+				37F5901818195C78009198D2 /* VCTableStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +497,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/ViciTouch.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -483,7 +507,7 @@
 				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = ViciTouch;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -491,81 +515,49 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/ViciTouch.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = ViciTouch;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
-			};
-			name = Release;
-		};
-		3761F414122416A1006098AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/ViciTouch.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = ViciTouch;
-				SDKROOT = iphoneos4.1;
-			};
-			name = Debug;
-		};
-		3761F415122416A1006098AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/ViciTouch.dst;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ViciTouch_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = ViciTouch;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ViciTouch3" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ViciTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
@@ -579,15 +571,6 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3761F413122416A1006098AE /* Build configuration list for PBXNativeTarget "ViciTouch4" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3761F414122416A1006098AE /* Debug */,
-				3761F415122416A1006098AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
